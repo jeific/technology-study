@@ -1,0 +1,13 @@
+/**
+ * 搭建内置jetty，支持spring框架
+ * 。添加sprint依赖
+ * 。配置web.xml文件，添加spring的servlet控制器
+ * >> 请求分类，为动态请求分配专门的url前缀，比如/action；动态资源置于/WEB-INF/views下，该路径在spring配置文件中绑定
+ * >> 和静态页面请求区分，使静态页面可以直接访问
+ * 。提供spring配置文件，绑定到spring的servlet控制器;启动spring的IOC功能；方便请求功能自动绑定
+ * 。在配置controller包下开发请求处理页面
+ * 。开发service功能
+ *
+ * ================================================
+ * 对于开发模式：测试时开启 build>>maven>>mvn clean package功能，使得在执行前运行war功能产生war包用于运行
+ */

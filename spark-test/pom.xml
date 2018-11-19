@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <groupId>org.snowlake</groupId>
+        <artifactId>technology-study</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>spark-test</artifactId>
+
+    <properties>
+        <!--以下为第三方jar，变量名单词之间用小数点分隔-->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.build.targetJdk>1.8</project.build.targetJdk>
+        <project.report.outputEncoding>UTF-8</project.report.outputEncoding>
+        <project.report.inputEncoding>UTF-8</project.report.inputEncoding>
+
+        <brd.repository>http://192.168.90.95:8081/repository</brd.repository>
+
+        <java.version>1.8</java.version>
+        <scala.version>2.11.8</scala.version>
+        <scala.binary.version>2.11</scala.binary.version>
+        <!--spark版本改为2.2.1，但swiftim-core, swiftim-common,swiftim-source, hbase-runner, spark-hbasesource的代码会报错，仍然保留在spark 2.1.1-->
+        <spark-2.1.version>2.1.1</spark-2.1.version>
+        <spark.version>2.3.1</spark.version>
+        <hadoop.version>2.6.0-cdh5.13.0</hadoop.version>
+        <hive.version>1.1.0-cdh5.13.0</hive.version>
+        <hbase.version>1.2.0-cdh5.13.0</hbase.version>
+        <kudu.version>1.5.0-cdh5.13.0</kudu.version>
+        <kafka.version>0.10.0.0</kafka.version>
+        <slf4j.version>1.7.16</slf4j.version>
+        <junit.version>4.12</junit.version>
+        <log4j.version>1.2.17</log4j.version>
+        <lucene.version>7.1.0</lucene.version>
+        <flume.version>1.7.0</flume.version>
+        <mysql.version>5.1.44</mysql.version>
+        <jetty.version>9.4.0.v20161208</jetty.version>
+        <jedis.version>2.9.0</jedis.version>
+        <presto.version>0.189</presto.version>
+        <commons-codec.version>1.11</commons-codec.version>
+        <netty.version>4.0.30.Final</netty.version>
+        <twitter-parquet-version>1.6.0</twitter-parquet-version>
+        <spring.version>4.3.4.RELEASE</spring.version>
+        <drools.version>6.4.0.Final</drools.version>
+        <es_hadoop.version>6.1.1</es_hadoop.version>
+        <guava.version>15.0</guava.version>
+        <libthrift.version>0.9.3</libthrift.version>
+        <elasticsearch.version>5.6.3</elasticsearch.version>
+        <curator-version>2.7.1</curator-version>
+        <github.jsqlparser>0.9.1</github.jsqlparser>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>io.netty</groupId>
+            <artifactId>netty-all</artifactId>
+            <version>4.0.30.Final</version>
+        </dependency>
+        <dependency>
+            <groupId>com.broadtech</groupId>
+            <artifactId>bdp-common-util</artifactId>
+            <version>1.2.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.spark</groupId>
+            <artifactId>spark-sql_2.11</artifactId>
+            <version>2.1.2</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.spark</groupId>
+            <artifactId>spark-streaming_2.11</artifactId>
+            <version>2.1.2</version>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>net.alchim31.maven</groupId>
+                <artifactId>scala-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+</project>

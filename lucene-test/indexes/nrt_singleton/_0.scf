@@ -1,0 +1,83 @@
+cfs entry for: _0.fld
+doc 0
+  field 0
+    name name
+    type string
+    value Tom
+doc 1
+  field 0
+    name name
+    type string
+    value Tom
+doc 2
+  field 1
+    name nice
+    type string
+    value ok
+doc 3
+  field 2
+    name age
+    type string
+    value 10
+END
+checksum 00000000000826538355
+cfs entry for: _0.inf
+number of fields 3
+  name name
+  number 0
+  index options DOCS
+  term vectors false
+  payloads false
+  norms false
+  doc values NONE
+  doc values gen -1
+  attributes 0
+  dimensional count 0
+  dimensional num bytes 0
+  name nice
+  number 1
+  index options DOCS
+  term vectors false
+  payloads false
+  norms false
+  doc values NONE
+  doc values gen -1
+  attributes 0
+  dimensional count 0
+  dimensional num bytes 0
+  name age
+  number 2
+  index options DOCS
+  term vectors false
+  payloads false
+  norms false
+  doc values NONE
+  doc values gen -1
+  attributes 0
+  dimensional count 0
+  dimensional num bytes 0
+checksum 00000000003628130240
+cfs entry for: _0.pst
+field age
+  term 10
+    doc 3
+field name
+  term Tom
+    doc 0
+    doc 1
+field nice
+  term ok
+    doc 2
+END
+checksum 00000000000420048148
+table of contents, size: 3
+  filename: _0.fld
+    start: 22
+    end: 293
+  filename: _0.inf
+    start: 315
+    end: 954
+  filename: _0.pst
+    start: 976
+    end: 1113
+table of contents begins at offset: 0000000000000001113

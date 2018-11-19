@@ -1,0 +1,5 @@
+# -----------------------
+# 重写Lucene的DocValues实现
+#------------------------
+
+org.apache.lucene.codecs.lucene54.SwiftimLucene54DocValuesFormat

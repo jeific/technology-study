@@ -1,0 +1,17 @@
+syntax = "proto3";
+package com.broadtech.google.protobuf;
+
+message HelloWorld
+{
+    // ID（必需）
+    int32 id = 1;
+      
+    // 姓名（必需）  
+    string name = 2;
+      
+    // email（可选）  
+    string email = 3;
+  
+    // 朋友（集合）  
+    repeated string friends = 4;  
+}

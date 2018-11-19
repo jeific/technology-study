@@ -1,0 +1,602 @@
+html, body, #wrapper {
+  height: 100%;
+  margin: 0px;
+  overflow: hidden;
+  padding: 0px;
+  position: relative;
+  width: 100%;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+#wrapper {
+  transition: all 0.4s;
+}
+#wrapper.theme-green {
+  background-color: #4caf50;
+}
+#wrapper.theme-green #card #timer #center-band #start-button i {
+  border-color: #4caf50;
+  color: #4caf50;
+}
+#wrapper.theme-green #card #timer #center-band #dial-dots-wrapper #dial-dots .dot-wrapper.expanded .dot {
+  background-color: #4caf50;
+}
+#wrapper.theme-green #card #timer #center-band #dial-track #dial #dial-ball {
+  background-color: #4caf50;
+}
+#wrapper.theme-green #card #timer #center-band #dial-track #dial #dial-ball:after {
+  background-color: rgba(76, 175, 80, 0.25);
+}
+#wrapper.theme-green #card #timer #center-band #center #time #centi-sec {
+  color: #4caf50;
+}
+#wrapper.theme-blue {
+  background-color: #03a9f4;
+}
+#wrapper.theme-blue #card #timer #center-band #start-button i {
+  border-color: #03a9f4;
+  color: #03a9f4;
+}
+#wrapper.theme-blue #card #timer #center-band #dial-dots-wrapper #dial-dots .dot-wrapper.expanded .dot {
+  background-color: #03a9f4;
+}
+#wrapper.theme-blue #card #timer #center-band #dial-track #dial #dial-ball {
+  background-color: #03a9f4;
+}
+#wrapper.theme-blue #card #timer #center-band #dial-track #dial #dial-ball:after {
+  background-color: rgba(3, 169, 244, 0.25);
+}
+#wrapper.theme-blue #card #timer #center-band #center #time #centi-sec {
+  color: #03a9f4;
+}
+#wrapper.theme-yellow {
+  background-color: #fbc02d;
+}
+#wrapper.theme-yellow #card #timer #center-band #start-button i {
+  border-color: #fbc02d;
+  color: #fbc02d;
+}
+#wrapper.theme-yellow #card #timer #center-band #dial-dots-wrapper #dial-dots .dot-wrapper.expanded .dot {
+  background-color: #fbc02d;
+}
+#wrapper.theme-yellow #card #timer #center-band #dial-track #dial #dial-ball {
+  background-color: #fbc02d;
+}
+#wrapper.theme-yellow #card #timer #center-band #dial-track #dial #dial-ball:after {
+  background-color: rgba(251, 192, 45, 0.25);
+}
+#wrapper.theme-yellow #card #timer #center-band #center #time #centi-sec {
+  color: #fbc02d;
+}
+#wrapper.theme-red {
+  background-color: #d32f2f;
+}
+#wrapper.theme-red #card #timer #center-band #start-button i {
+  border-color: #d32f2f;
+  color: #d32f2f;
+}
+#wrapper.theme-red #card #timer #center-band #dial-dots-wrapper #dial-dots .dot-wrapper.expanded .dot {
+  background-color: #d32f2f;
+}
+#wrapper.theme-red #card #timer #center-band #dial-track #dial #dial-ball {
+  background-color: #d32f2f;
+}
+#wrapper.theme-red #card #timer #center-band #dial-track #dial #dial-ball:after {
+  background-color: rgba(211, 47, 47, 0.25);
+}
+#wrapper.theme-red #card #timer #center-band #center #time #centi-sec {
+  color: #d32f2f;
+}
+#wrapper #inspiration {
+  bottom: 10px;
+  left: 10px;
+  position: absolute;
+  z-index: 1;
+}
+#wrapper #inspiration .label {
+  color: #3c3c3c;
+  display: inline-block;
+  margin: 0px;
+  font-size: 0.9em;
+  font-weight: 300;
+}
+#wrapper #inspiration .link {
+  color: white;
+  display: inline-block;
+  font-size: 0.9em;
+  font-weight: 300;
+  margin: 0px;
+  margin-left: 4px;
+  text-decoration: none;
+}
+
+#card {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  background: white;
+  border-radius: 2px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 10px, rgba(0, 0, 0, 0.23) 0px 3px 10px;
+  height: 520px;
+  overflow: hidden;
+  position: relative;
+  width: 700px;
+  z-index: 10;
+}
+#card:hover #timer #center-band #dial-track #dial #dial-ball {
+  opacity: 1;
+}
+#card:hover #timer #center-band #dial-track #dial #dial-ball:after {
+  height: 80px;
+  opacity: 1;
+  width: 80px;
+}
+
+#settings {
+  height: 240px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 60px;
+}
+#settings #theme {
+  height: 100%;
+  width: 100%;
+}
+#settings #theme .option {
+  cursor: pointer;
+  display: inline-block;
+  height: 60px;
+  position: relative;
+  width: 60px;
+}
+#settings #theme .option.selected i {
+  opacity: 1;
+}
+#settings #theme .option .color {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 6px, rgba(0, 0, 0, 0.12) 0px 1px 4px;
+  height: 50px;
+  transition: all 0.4s;
+  width: 50px;
+}
+#settings #theme .option i {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  color: white;
+  opacity: 0;
+  transition: all 0.4s;
+}
+#settings #theme #green:hover .color {
+  background-color: #2e7d32;
+}
+#settings #theme #green .color {
+  background-color: #4caf50;
+}
+#settings #theme #blue:hover .color {
+  background-color: #1565c0;
+}
+#settings #theme #blue .color {
+  background-color: #03a9f4;
+}
+#settings #theme #yellow:hover .color {
+  background-color: #f9a825;
+}
+#settings #theme #yellow .color {
+  background-color: #fbc02d;
+}
+#settings #theme #red:hover .color {
+  background-color: #b71c1c;
+}
+#settings #theme #red .color {
+  background-color: #d32f2f;
+}
+
+.circle {
+  border-radius: 1000px;
+}
+
+#timer {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  cursor: pointer;
+  height: 420px;
+  user-select: none;
+  width: 420px;
+}
+#timer.animate-in {
+  pointer-events: none;
+}
+#timer.animate-in #center-band #start-button {
+  animation: animate-start-button 2s ease-in;
+}
+#timer.animate-in #center-band #start-button i.fa-play {
+  opacity: 0;
+}
+#timer.animate-in #center-band #start-button i.fa-clock-o {
+  opacity: 1;
+}
+#timer.animate-in #center-band #dial-track #dial #dial-ball {
+  opacity: 0 !important;
+}
+#timer.animate-in #center-band #center #time {
+  opacity: 0;
+}
+#timer.setting #center-band #dial-dots-wrapper #dial-dots .dot-wrapper .dot {
+  height: 4px;
+  opacity: 1;
+  width: 4px;
+}
+#timer #top-band, #timer #bottom-band {
+  background: linear-gradient(to right, #fafafa 60%, #e6e6e6 80%);
+  height: 380px;
+  left: 50%;
+  overflow: hidden;
+  position: absolute;
+  transform: translateX(-50%);
+  width: 380px;
+  z-index: 1;
+}
+#timer #top-band:before, #timer #top-band:after, #timer #top-band .border, #timer #bottom-band:before, #timer #bottom-band:after, #timer #bottom-band .border {
+  background-color: white;
+  border-radius: 10000px;
+  content: '';
+  height: 900px;
+  position: absolute;
+  top: 50%;
+  width: 900px;
+  z-index: 2;
+}
+#timer #top-band {
+  top: -200px;
+}
+#timer #top-band:before {
+  left: 0px;
+  transform: translateX(-820px) translateY(-560px);
+}
+#timer #top-band:after {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 10px inset, rgba(0, 0, 0, 0.23) 0px 3px 10px inset;
+  right: 0px;
+  transform: translateX(820px) translateY(-560px);
+}
+#timer #top-band .border {
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 6px inset, rgba(0, 0, 0, 0.12) 0px 1px 4px inset;
+  height: 895px;
+  left: 0px;
+  transform: translateX(-820px) translateY(-560px);
+  width: 895px;
+}
+#timer #bottom-band {
+  bottom: -200px;
+}
+#timer #bottom-band:before {
+  left: 0px;
+  transform: translateX(-820px) translateY(-340px);
+}
+#timer #bottom-band:after {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 10px inset, rgba(0, 0, 0, 0.23) 0px 3px 10px inset;
+  right: 0px;
+  transform: translateX(820px) translateY(-340px);
+}
+#timer #bottom-band .border {
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 6px inset, rgba(0, 0, 0, 0.12) 0px 1px 4px inset;
+  height: 895px;
+  left: 0px;
+  transform: translateX(-820px) translateY(-340px);
+  width: 895px;
+}
+#timer #center-band {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  backface-visibility: hidden;
+  background: linear-gradient(to right, white, #f0f0f0);
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 6px, rgba(0, 0, 0, 0.12) 0px 1px 4px;
+  height: 380px;
+  padding: 20px;
+  width: 380px;
+  z-index: 2;
+}
+#timer #center-band #start-button {
+  height: 34px;
+  left: 50%;
+  position: absolute;
+  top: 100px;
+  transform: translateX(-50%);
+  width: 34px;
+  z-index: 5;
+}
+#timer #center-band #start-button.show-pause i.fa-play {
+  opacity: 0;
+}
+#timer #center-band #start-button.show-pause i.fa-pause {
+  opacity: 1;
+}
+#timer #center-band #start-button:hover:after {
+  opacity: 1;
+  height: 60px;
+  width: 60px;
+}
+#timer #center-band #start-button:active:after {
+  opacity: 1;
+  height: 80px;
+  width: 80px;
+}
+#timer #center-band #start-button:after {
+  background-color: rgba(240, 240, 240, 0.7);
+  border-radius: 10000px;
+  content: '';
+  height: 30px;
+  left: 50%;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  transition: all 0.4s;
+  width: 30px;
+  z-index: -1;
+}
+#timer #center-band #start-button i {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 10000px;
+  font-size: 1em;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  transition: all 0.4s;
+  width: 30px;
+}
+#timer #center-band #start-button i.fa-pause:before, #timer #center-band #start-button i.fa-clock-o:before {
+  margin-left: 0px;
+}
+#timer #center-band #start-button i.fa-pause {
+  opacity: 0;
+}
+#timer #center-band #start-button i.fa-clock-o {
+  border-width: 0px;
+  font-size: 34px;
+  opacity: 0;
+}
+#timer #center-band #start-button i:before {
+  margin-left: 4px;
+}
+#timer #center-band #dial-dots-wrapper {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  height: 380px;
+  width: 380px;
+  overflow: hidden;
+  z-index: 2;
+}
+#timer #center-band #dial-dots-wrapper #dial-dots {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  backface-visibility: hidden;
+  height: 342px;
+  width: 342px;
+}
+#timer #center-band #dial-dots-wrapper #dial-dots .dot-wrapper {
+  border-radius: 10000px;
+  height: 4px;
+  position: absolute;
+  width: 4px;
+  z-index: 1;
+}
+#timer #center-band #dial-dots-wrapper #dial-dots .dot-wrapper.expanded {
+  z-index: 2;
+}
+#timer #center-band #dial-dots-wrapper #dial-dots .dot-wrapper.expanded .dot {
+  height: 50px;
+  opacity: 1;
+  width: 50px;
+}
+#timer #center-band #dial-dots-wrapper #dial-dots .dot-wrapper .dot {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  background-color: gainsboro;
+  border-radius: 10000px;
+  height: 0px;
+  opacity: 0;
+  position: absolute;
+  transition: all 0.4s;
+  width: 0px;
+}
+#timer #center-band #dial-track {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  backface-visibility: hidden;
+  height: 340px;
+  width: 340px;
+  z-index: 4;
+}
+#timer #center-band #dial-track #dial {
+  height: 60px;
+  left: 50%;
+  position: absolute;
+  top: 0px;
+  transform: translateX(-50%) translateY(-50%);
+  user-select: none;
+  width: 60px;
+  z-index: 5;
+}
+#timer #center-band #dial-track #dial:hover #dial-ball {
+  height: 55px;
+  width: 55px;
+}
+#timer #center-band #dial-track #dial:hover #dial-ball:after {
+  height: 130px !important;
+  width: 130px !important;
+}
+#timer #center-band #dial-track #dial #dial-ball {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 6px, rgba(0, 0, 0, 0.12) 0px 1px 4px;
+  height: 50px;
+  opacity: 0;
+  transition: all 0.4s;
+  width: 50px;
+  z-index: 1;
+}
+#timer #center-band #dial-track #dial #dial-ball:after {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  border-radius: 1000px;
+  content: '';
+  height: 5px;
+  opacity: 0;
+  transition: all 0.4s;
+  width: 5px;
+}
+#timer #band-border {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  background: white;
+  border: 2px solid #e6e6e6;
+  height: 380px;
+  padding: 4px;
+  width: 380px;
+}
+#timer #base {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  background: linear-gradient(to right, #fafafa, #f0f0f0);
+  height: 380px;
+  width: 380px;
+}
+#timer #center {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.1) 10px 0px 25px, rgba(0, 0, 0, 0.05) 0px 0px 10px;
+  height: 300px;
+  overflow: hidden;
+  width: 300px;
+  z-index: 3;
+}
+#timer #center #time {
+  font-size: 1em;
+  font-weight: 300;
+  left: 50%;
+  margin: 0px;
+  position: absolute;
+  top: 100px;
+  transform: translateX(-50%);
+  transition: all 0.4s;
+  width: 120px;
+}
+#timer #center #time #sec, #timer #center #time #centi-sec {
+  display: inline-block;
+  font-weight: 100;
+}
+#timer #center #time #sec.entrance, #timer #center #time #centi-sec.entrance {
+  animation: entrance 1s ease-in;
+}
+#timer #center #time #sec {
+  color: #3c3c3c;
+  font-size: 5em;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  width: 120px;
+}
+#timer #center #time #centi-sec {
+  color: #4caf50;
+  font-size: 3em;
+  height: 35px;
+  line-height: 35px;
+  margin-left: 10px;
+  margin-top: 5px;
+  width: 60px;
+}
+
+@keyframes animate-start-button {
+  0%, 10%, 20%, 30%, 40%, to {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    top: 50%;
+  }
+  0% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-50%) scale3d(0.3, 0.3, 0.3);
+  }
+  10% {
+    transform: translateX(-50%) translateY(-50%) scale3d(1.1, 1.1, 1.1);
+  }
+  20% {
+    transform: translateX(-50%) translateY(-50%) scale3d(0.9, 0.9, 0.9);
+  }
+  30% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(-50%) scale3d(1.03, 1.03, 1.03);
+  }
+  40% {
+    transform: translateX(-50%) translateY(-50%) scale3d(0.97, 0.97, 0.97);
+  }
+  50% {
+    opacity: 1;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%) scale3d(1, 1, 1);
+  }
+  100% {
+    top: 100px;
+    transform: translateX(-50%) translateY(0%) scale3d(1, 1, 1);
+  }
+}
+@keyframes entrance {
+  from, 60%, 75%, 90%, to {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  from {
+    opacity: 0;
+    transform: translate3d(0, 3000px, 0);
+  }
+  60% {
+    opacity: 1;
+    transform: translate3d(0, -20px, 0);
+  }
+  75% {
+    transform: translate3d(0, 10px, 0);
+  }
+  90% {
+    transform: translate3d(0, -5px, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}

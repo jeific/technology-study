@@ -1,0 +1,24 @@
+/**
+ * 搭建内置jetty，支持spring框架
+ * 。添加sprint依赖
+ * 。配置web.xml文件，添加spring的servlet控制器
+ * >> 请求分类，为动态请求分配专门的url前缀，比如/action；动态资源置于/WEB-INF/views下，该路径在spring配置文件中绑定
+ * >> 和静态页面请求区分，使静态页面可以直接访问
+ * 。提供spring配置文件，绑定到spring的servlet控制器;启动spring的IOC功能；方便请求功能自动绑定
+ * 。在配置controller包下开发请求处理页面
+ * 。开发service功能
+ * 。后台请求地址: /action/*
+ * 。使用sprint的@Value注解获取配置文件值;参考：https://blog.csdn.net/zq17865815296/article/details/78525978
+ * ================================================
+ * 对于开发模式：测试时开启 build>>maven>>mvn clean package功能，使得在执行前运行war功能产生war包用于运行
+ */
+
+----------------------------------------------------
+自定义archetype：
+1）创建maven工程或模块
+2）构建模板基础代码
+3）添加org.apache.maven.plugins:maven-archetype-plugin插件
+4）运行: mvn clean archetype:create-from-project
+5）切换命令目录：模块的target/generated-sources/archetype
+6）运行mvn install  | mvn deploy
+7）使用archetype，方法和公布的archetype雷同

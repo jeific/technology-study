@@ -1,0 +1,12 @@
+field age
+  term 10
+    doc 3
+field name
+  term Tom
+    doc 1
+    doc 2
+field nice
+  term ok
+    doc 0
+END
+checksum 00000000001742338074

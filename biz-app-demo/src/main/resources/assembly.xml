@@ -1,0 +1,36 @@
+<assembly>
+    <id>bin</id>
+    <formats>
+        <format>dir</format>
+        <format>tar.gz</format>
+    </formats>
+    <includeBaseDirectory>true</includeBaseDirectory>
+
+    <fileSets>
+        <fileSet>
+            <directory>target/depends</directory>
+            <outputDirectory>core</outputDirectory>
+            <fileMode>644</fileMode>
+        </fileSet>
+        <fileSet>
+            <directory>target</directory>
+            <outputDirectory>core</outputDirectory>
+            <fileMode>644</fileMode>
+            <includes>
+                <include>${project.artifactId}-${project.version}.jar</include>
+            </includes>
+        </fileSet>
+        <fileSet>
+            <directory>${project.basedir}/src/main/resources/</directory>
+            <outputDirectory>conf</outputDirectory>
+            <excludes>
+                <exclude>META-INF/**</exclude>
+                <exclude>assembly.xml</exclude>
+            </excludes>
+        </fileSet>
+        <fileSet>
+            <directory>${project.basedir}/src/main/webapps</directory>
+            <outputDirectory>webapps</outputDirectory>
+        </fileSet>
+    </fileSets>
+</assembly>

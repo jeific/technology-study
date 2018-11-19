@@ -1,0 +1,31 @@
+<assembly>
+    <id>bin</id>
+    <formats>
+        <format>tar.gz</format>
+    </formats>
+    <includeBaseDirectory>true</includeBaseDirectory>
+
+    <fileSets>
+        <fileSet>
+            <directory>target/${project.artifactId}-${project.version}</directory>
+            <outputDirectory>webapp</outputDirectory>
+        </fileSet>
+        <fileSet>
+            <directory>${project.basedir}/bin/</directory>
+            <outputDirectory>bin</outputDirectory>
+            <includes>
+                <include>**/*</include>
+            </includes>
+            <fileMode>751</fileMode>
+        </fileSet>
+        <fileSet>
+            <directory>${project.basedir}/src/main/resources/</directory>
+            <outputDirectory>conf</outputDirectory>
+            <excludes>
+                <exclude>META-INF/**</exclude>
+                <exclude>org.apache.spark/**</exclude>
+                <exclude>assembly.xml</exclude>
+            </excludes>
+        </fileSet>
+    </fileSets>
+</assembly>

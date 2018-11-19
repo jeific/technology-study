@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>CSS3手表倒计时动画DEMO演示 可自定义主题皮肤</title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:100,300,400,700" rel="stylesheet">
+  <!--https://www.html5tricks.com/css3-watch-timer.html-->
+  <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
+
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+  
+<div class="theme-green" id="wrapper">
+  <div id="card">
+    <div id="settings">
+      <div id="theme">
+        <div class="option selected" id="green">
+          <div class="color circle"></div><i class="fa fa-check"></i>
+        </div>
+        <div class="option" id="blue">
+          <div class="color circle"></div><i class="fa fa-check"></i>
+        </div>
+        <div class="option" id="yellow">
+          <div class="color circle"></div><i class="fa fa-check"></i>
+        </div>
+        <div class="option" id="red">
+          <div class="color circle"></div><i class="fa fa-check"></i>
+        </div>
+      </div>
+    </div>
+    <div class="animate-in" id="timer">
+      <div id="top-band">
+        <div class="border"></div>
+      </div>
+      <div id="bottom-band">
+        <div class="border"></div>
+      </div>
+      <div class="circle" id="center-band">
+        <div class="circle" id="start-button"><i class="fa fa-clock-o"></i><i class="fa fa-play"></i><i class="fa fa-pause"></i></div>
+        <div class="circle" id="dial-dots-wrapper">
+          <div class="circle" id="dial-dots"></div>
+        </div>
+        <div class="circle" id="dial-track">
+          <div class="circle" id="dial">
+            <div class="circle" id="dial-ball"></div>
+          </div>
+        </div>
+        <div class="circle" id="band-border"></div>
+        <div class="circle" id="base"></div>
+        <div class="circle" id="center">
+          <div id="time"> 
+            <div id="sec">00</div>
+            <div id="centi-sec">00</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <script src='js/moment.min.js'></script>
+<script src='js/lodash.min.js'></script>
+
+    <script  src="js/index.js"></script>
+
+</body>
+</html>

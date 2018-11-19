@@ -1,0 +1,35 @@
+number of fields 3
+  name nice
+  number 0
+  index options DOCS
+  term vectors false
+  payloads false
+  norms false
+  doc values NONE
+  doc values gen -1
+  attributes 0
+  dimensional count 0
+  dimensional num bytes 0
+  name name
+  number 1
+  index options DOCS
+  term vectors false
+  payloads false
+  norms false
+  doc values NONE
+  doc values gen -1
+  attributes 0
+  dimensional count 0
+  dimensional num bytes 0
+  name age
+  number 2
+  index options DOCS
+  term vectors false
+  payloads false
+  norms false
+  doc values NONE
+  doc values gen -1
+  attributes 0
+  dimensional count 0
+  dimensional num bytes 0
+checksum 00000000003988730683

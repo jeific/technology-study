@@ -1,0 +1,23 @@
+{
+  "compatibility" : {
+    "cdhVersion" : {
+      "min" : "5.5"
+    }
+  },
+  "metricDefinitions" : [ ],
+  "name" : "BDP",
+  "nameForCrossEntityAggregateMetrics" : "bdps",
+  "roles" : [ {
+    "name" : "BRD_QUERY",
+    "nameForCrossEntityAggregateMetrics" : "bdp_querys",
+    "metricDefinitions" : [ {
+      "context" : "REGEX$$bdp.metrics:type=query::bdp_query_requests_count",
+      "counter" : false,
+      "description" : "查询请求数type=query::bdp_query_requests_count",
+      "label" : "查询请求数",
+      "name" : "bdp_query_requests_count",
+      "numeratorUnit" : "requests"
+    } ]
+  } ],
+  "version" : "1.0.0"
+}

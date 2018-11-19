@@ -1,0 +1,821 @@
+{
+  "beans" : [ {
+    "name" : "java.lang:type=MemoryPool,name=Metaspace",
+    "modelerType" : "sun.management.MemoryPoolImpl",
+    "Name" : "Metaspace",
+    "Type" : "NON_HEAP",
+    "Valid" : true,
+    "CollectionUsage" : null,
+    "MemoryManagerNames" : [ "Metaspace Manager" ],
+    "PeakUsage" : {
+      "committed" : 21807104,
+      "init" : 0,
+      "max" : -1,
+      "used" : 21200464
+    },
+    "Usage" : {
+      "committed" : 21807104,
+      "init" : 0,
+      "max" : -1,
+      "used" : 21211512
+    },
+    "UsageThreshold" : 0,
+    "UsageThresholdCount" : 0,
+    "CollectionUsageThresholdSupported" : false,
+    "UsageThresholdExceeded" : false,
+    "UsageThresholdSupported" : true,
+    "ObjectName" : "java.lang:type=MemoryPool,name=Metaspace"
+  }, {
+    "name" : "java.lang:type=MemoryPool,name=PS Old Gen",
+    "modelerType" : "sun.management.MemoryPoolImpl",
+    "Name" : "PS Old Gen",
+    "Type" : "HEAP",
+    "Valid" : true,
+    "CollectionUsage" : {
+      "committed" : 0,
+      "init" : 89653248,
+      "max" : 1412431872,
+      "used" : 0
+    },
+    "CollectionUsageThreshold" : 0,
+    "CollectionUsageThresholdCount" : 0,
+    "MemoryManagerNames" : [ "PS MarkSweep" ],
+    "PeakUsage" : {
+      "committed" : 89653248,
+      "init" : 89653248,
+      "max" : 1412431872,
+      "used" : 335408
+    },
+    "Usage" : {
+      "committed" : 89653248,
+      "init" : 89653248,
+      "max" : 1412431872,
+      "used" : 335408
+    },
+    "UsageThreshold" : 0,
+    "UsageThresholdCount" : 0,
+    "CollectionUsageThresholdExceeded" : false,
+    "CollectionUsageThresholdSupported" : true,
+    "UsageThresholdExceeded" : false,
+    "UsageThresholdSupported" : true,
+    "ObjectName" : "java.lang:type=MemoryPool,name=PS Old Gen"
+  }, {
+    "name" : "java.lang:type=GarbageCollector,name=PS Scavenge",
+    "modelerType" : "sun.management.GarbageCollectorImpl",
+    "LastGcInfo" : {
+      "GcThreadCount" : 8,
+      "duration" : 5,
+      "endTime" : 3235,
+      "id" : 3,
+      "memoryUsageAfterGc" : [ {
+        "key" : "Compressed Class Space",
+        "value" : {
+          "committed" : 2621440,
+          "init" : 0,
+          "max" : 1073741824,
+          "used" : 2513456
+        }
+      }, {
+        "key" : "PS Survivor Space",
+        "value" : {
+          "committed" : 5242880,
+          "init" : 5242880,
+          "max" : 5242880,
+          "used" : 5024808
+        }
+      }, {
+        "key" : "PS Old Gen",
+        "value" : {
+          "committed" : 89653248,
+          "init" : 89653248,
+          "max" : 1412431872,
+          "used" : 335408
+        }
+      }, {
+        "key" : "Metaspace",
+        "value" : {
+          "committed" : 20971520,
+          "init" : 0,
+          "max" : -1,
+          "used" : 20294168
+        }
+      }, {
+        "key" : "PS Eden Space",
+        "value" : {
+          "committed" : 34078720,
+          "init" : 34078720,
+          "max" : 695205888,
+          "used" : 0
+        }
+      }, {
+        "key" : "Code Cache",
+        "value" : {
+          "committed" : 6422528,
+          "init" : 2555904,
+          "max" : 251658240,
+          "used" : 6337920
+        }
+      } ],
+      "memoryUsageBeforeGc" : [ {
+        "key" : "Compressed Class Space",
+        "value" : {
+          "committed" : 2621440,
+          "init" : 0,
+          "max" : 1073741824,
+          "used" : 2513456
+        }
+      }, {
+        "key" : "PS Survivor Space",
+        "value" : {
+          "committed" : 5242880,
+          "init" : 5242880,
+          "max" : 5242880,
+          "used" : 4345664
+        }
+      }, {
+        "key" : "PS Old Gen",
+        "value" : {
+          "committed" : 89653248,
+          "init" : 89653248,
+          "max" : 1412431872,
+          "used" : 253472
+        }
+      }, {
+        "key" : "Metaspace",
+        "value" : {
+          "committed" : 20971520,
+          "init" : 0,
+          "max" : -1,
+          "used" : 20294168
+        }
+      }, {
+        "key" : "PS Eden Space",
+        "value" : {
+          "committed" : 34078720,
+          "init" : 34078720,
+          "max" : 695205888,
+          "used" : 34078720
+        }
+      }, {
+        "key" : "Code Cache",
+        "value" : {
+          "committed" : 6422528,
+          "init" : 2555904,
+          "max" : 251658240,
+          "used" : 6337920
+        }
+      } ],
+      "startTime" : 3230
+    },
+    "CollectionCount" : 3,
+    "CollectionTime" : 14,
+    "Name" : "PS Scavenge",
+    "Valid" : true,
+    "MemoryPoolNames" : [ "PS Eden Space", "PS Survivor Space" ],
+    "ObjectName" : "java.lang:type=GarbageCollector,name=PS Scavenge"
+  }, {
+    "name" : "java.lang:type=MemoryPool,name=PS Eden Space",
+    "modelerType" : "sun.management.MemoryPoolImpl",
+    "Name" : "PS Eden Space",
+    "Type" : "HEAP",
+    "Valid" : true,
+    "CollectionUsage" : {
+      "committed" : 34078720,
+      "init" : 34078720,
+      "max" : 695205888,
+      "used" : 0
+    },
+    "CollectionUsageThreshold" : 0,
+    "CollectionUsageThresholdCount" : 0,
+    "MemoryManagerNames" : [ "PS MarkSweep", "PS Scavenge" ],
+    "PeakUsage" : {
+      "committed" : 34078720,
+      "init" : 34078720,
+      "max" : 695205888,
+      "used" : 34078720
+    },
+    "Usage" : {
+      "committed" : 34078720,
+      "init" : 34078720,
+      "max" : 695205888,
+      "used" : 5274600
+    },
+    "CollectionUsageThresholdExceeded" : false,
+    "CollectionUsageThresholdSupported" : true,
+    "UsageThresholdSupported" : false,
+    "ObjectName" : "java.lang:type=MemoryPool,name=PS Eden Space"
+  }, {
+    "name" : "JMImplementation:type=MBeanServerDelegate",
+    "modelerType" : "javax.management.MBeanServerDelegate",
+    "MBeanServerId" : "zl-asus_1527588597297",
+    "SpecificationName" : "Java Management Extensions",
+    "SpecificationVersion" : "1.4",
+    "SpecificationVendor" : "Oracle Corporation",
+    "ImplementationName" : "JMX",
+    "ImplementationVersion" : "1.8.0_152-b16",
+    "ImplementationVendor" : "Oracle Corporation"
+  }, {
+    "name" : "java.lang:type=Runtime",
+    "modelerType" : "sun.management.RuntimeImpl",
+    "Name" : "1452@zl-asus",
+    "ClassPath" : "D:\\eclipse\\Workspaces\\MyEclipse\\starcor\\cdn\\cdn-query\\target\\classes;C:\\Users\\Administrator\\.m2\\repository\\com\\broadtech\\bdp-common-hadoop\\1.2.2-SNAPSHOT\\bdp-common-hadoop-1.2.2-SNAPSHOT.jar;C:\\Users\\Administrator\\.m2\\repository\\com\\broadtech\\bdp-common-util\\1.2.2-SNAPSHOT\\bdp-common-util-1.2.2-SNAPSHOT.jar;C:\\Users\\Administrator\\.m2\\repository\\org\\apache\\hadoop\\hadoop-client\\2.6.0-cdh5.13.0\\hadoop-client-2.6.0-cdh5.13.0.jar;C:\\Users\\Administrator\\.m2\\repository\\org\\apache\\hadoop\\hadoop-common\\2.6.0-cdh5.13.0\\hadoop-common-2.6.0-cdh5.13.0.jar;C:\\Users\\Administrator\\.m2\\repository\\commons-cli\\commons-cli\\1.2\\commons-cli-1.2.jar;C:\\Users\\Administrator\\.m2\\repository\\org\\apache\\commons\\commons-math3\\3.1.1\\commons-math3-3.1.1.jar;C:\\Users\\Administrator\\.m2\\repository\\xmlenc\\xmlenc\\0.52\\xmlenc-0.52.jar;C:\\Users\\Administrator\\.m2\\repository\\commons-httpclient\\commons-httpclient\\3.1\\commons-httpclient-3.1.jar;C:\\Users\\Administrator\\.m2\\repository\\commons-net\\commons-net\\3.1\\commons-net-3.1.jar;C:\\Users\\Administrator\\.m2\\repository\\commons-collections\\commons-collections\\3.2.2\\commons-collections-3.2.2.jar;C:\\Users\\Administrator\\.m2\\repository\\commons-configuration\\commons-configuration\\1.9\\commons-configuration-1.9.jar;C:\\Users\\Administrator\\.m2\\repository\\org\\codehaus\\jackson\\jackson-core-asl\\1.8.8\\jackson-core-asl-1.8.8.jar;C:\\Users\\Administrator\\.m2\\repository\\org\\apache\\avro\\avro\\1.7.6-cdh5.13.0\\avro-1.7.6-cdh5.13.0.jar;C:\\Users\\Administrator\\.m2\\repository\\com\\thoughtworks\\paranamer\\paranamer\\2.3\\paranamer-2.3.jar;C:\\Users\\Administrator\\.m2\\repository\\org\\xerial\\snappy\\snappy-java\\1.0.4.1\\snappy-java-1.0.4.1.jar;C:\\Users\\Administrator\\.m2\\repository\\com\\google\\code\\gson\\gson\\2.2.4\\gson-2.2.4.jar;C:\\Users\\Administrator\\.m2\\repository\\org\\apache\\curator\\curator-client\\2.7.1\\curator-client-2.7.1.jar;C:\\Users\\Administrator\\.m2\\repository\\org\\apache\\curator\\curator-recipes\\2.7.1\\curator-recipes-2.7.1.jar;C:\\Users\\Administrator\\.m2\\repository\\com\\google\\code\\findbugs\\jsr305\\3.0.0\\jsr305-3.0.0.jar;C:\\Users\\Administrator\\.m2\\repository\\org\\apache\\htrace\\htrace-core4\\4.0.1-incubating\\htrace-core4-4.0.1-incubating.jar;C:\\Users\\Administrator\\.m2\\repository\\org\\apache\\commons\\commons-compress\\1.4.1\\commons-compress-1.4.1.jar;C:\\Users\\Administrator\\.m2\\repository\\org\\tukaani\\xz\\1.0\\xz-1.0.jar;C:\\Users\\Administrator\\.m2\\repository\\org\\apache\\hadoop\\hadoop-hdfs\\2.6.0-cdh5.13.0\\hadoop-hdfs-2.6.0-cdh5.13.0.jar;C:\\Users\\Administrator\\.m2\\repository\\org\\mortbay\\jetty\\jetty-util\\6.1.26.cloudera.4\\jetty-util-6.1.26.cloudera.4.jar;C:\\Users\\Administrator\\.m2\\repository\\io\\netty\\netty\\3.10.5.Final\\netty-3.10.5.Final.jar;C:\\Users\\Administrator\\.m2\\repository\\xerces\\xercesImpl\\2.9.1\\xercesImpl-2.9.1.jar;C:\\Users\\Administrator\\.m2\\repository\\org\\fusesource\\leveldbjni\\leveldbjni-all\\1.8\\leveldbjni-all-1.8.jar;C:\\Users\\Administrator\\.m2\\repository\\org\\apache\\hadoop\\hadoop-mapreduce-client-app\\2.6.0-cdh5.13.0\\hadoop-mapreduce-client-app-2.6.0-cdh5.13.0.jar;C:\\Users\\Administrator\\.m2\\repository\\org\\apache\\hadoop\\hadoop-mapreduce-client-common\\2.6.0-cdh5.13.0\\hadoop-mapreduce-client-common-2.6.0-cdh5.13.0.jar;C:\\Users\\Administrator\\.m2\\repository\\org\\apache\\hadoop\\hadoop-yarn-client\\2.6.0-cdh5.13.0\\hadoop-yarn-client-2.6.0-cdh5.13.0.jar;C:\\Users\\Administrator\\.m2\\repository\\org\\apache\\hadoop\\hadoop-yarn-server-common\\2.6.0-cdh5.13.0\\hadoop-yarn-server-common-2.6.0-cdh5.13.0.jar;C:\\Users\\Administrator\\.m2\\repository\\org\\apache\\hadoop\\hadoop-mapreduce-client-shuffle\\2.6.0-cdh5.13.0\\hadoop-mapreduce-client-shuffle-2.6.0-cdh5.13.0.jar;C:\\Users\\Administrator\\.m2\\repository\\org\\apache\\hadoop\\hadoop-yarn-api\\2.6.0-cdh5.13.0\\hadoop-yarn-api-2.6.0-cdh5.13.0.jar;C:\\Users\\Administrator\\.m2\\repository\\org\\apache\\hadoop\\hadoop-mapreduce-client-core\\2.6.0-cdh5.13.0\\hadoop-mapreduce-client-core-2.6.0-cdh5.13.0.jar;C:\\Users\\Administrator\\.m2\\repository\\org\\apache\\hadoop\\hadoop-yarn-common\\2.6.0-cdh5.13.0\\hadoop-yarn-common-2.6.0-cdh5.13.0.jar;C:\\Users\\Administrator\\.m2\\repository\\javax\\xml\\bind\\jaxb-api\\2.2.2\\jaxb-api-2.2.2.jar;C:\\Users\\Administrator\\.m2\\repository\\javax\\xml\\stream\\stax-api\\1.0-2\\stax-api-1.0-2.jar;C:\\Users\\Administrator\\.m2\\repository\\com\\sun\\jersey\\jersey-core\\1.9\\jersey-core-1.9.jar;C:\\Users\\Administrator\\.m2\\repository\\com\\sun\\jersey\\jersey-client\\1.9\\jersey-client-1.9.jar;C:\\Users\\Administrator\\.m2\\repository\\org\\codehaus\\jackson\\jackson-jaxrs\\1.8.8\\jackson-jaxrs-1.8.8.jar;C:\\Users\\Administrator\\.m2\\repository\\org\\codehaus\\jackson\\jackson-xc\\1.8.8\\jackson-xc-1.8.8.jar;C:\\Users\\Administrator\\.m2\\repository\\org\\apache\\hadoop\\hadoop-mapreduce-client-jobclient\\2.6.0-cdh5.13.0\\hadoop-mapreduce-client-jobclient-2.6.0-cdh5.13.0.jar;C:\\Users\\Administrator\\.m2\\repository\\org\\apache\\hadoop\\hadoop-annotations\\2.6.0-cdh5.13.0\\hadoop-annotations-2.6.0-cdh5.13.0.jar;C:\\Users\\Administrator\\.m2\\repository\\org\\apache\\hbase\\hbase-client\\1.2.0-cdh5.13.0\\hbase-client-1.2.0-cdh5.13.0.jar;C:\\Users\\Administrator\\.m2\\repository\\org\\apache\\hbase\\hbase-annotations\\1.2.0-cdh5.13.0\\hbase-annotations-1.2.0-cdh5.13.0.jar;C:\\Users\\Administrator\\.m2\\repository\\org\\apache\\hbase\\hbase-common\\1.2.0-cdh5.13.0\\hbase-common-1.2.0-cdh5.13.0.jar;C:\\Users\\Administrator\\.m2\\repository\\org\\apache\\hadoop\\hadoop-core\\2.6.0-mr1-cdh5.13.0\\hadoop-core-2.6.0-mr1-cdh5.13.0.jar;C:\\Users\\Administrator\\.m2\\repository\\org\\mortbay\\jetty\\jetty\\6.1.26.cloudera.4\\jetty-6.1.26.cloudera.4.jar;C:\\Users\\Administrator\\.m2\\repository\\tomcat\\jasper-runtime\\5.5.23\\jasper-runtime-5.5.23.jar;C:\\Users\\Administrator\\.m2\\repository\\tomcat\\jasper-compiler\\5.5.23\\jasper-compiler-5.5.23.jar;C:\\Users\\Administrator\\.m2\\repository\\commons-el\\commons-el\\1.0\\commons-el-1.0.jar;C:\\Users\\Administrator\\.m2\\repository\\net\\java\\dev\\jets3t\\jets3t\\0.6.1\\jets3t-0.6.1.jar;C:\\Users\\Administrator\\.m2\\repository\\hsqldb\\hsqldb\\1.8.0.10\\hsqldb-1.8.0.10.jar;C:\\Users\\Administrator\\.m2\\repository\\org\\eclipse\\jdt\\core\\3.1.1\\core-3.1.1.jar;C:\\Users\\Administrator\\.m2\\repository\\org\\apache\\hbase\\hbase-protocol\\1.2.0-cdh5.13.0\\hbase-protocol-1.2.0-cdh5.13.0.jar;C:\\Users\\Administrator\\.m2\\repository\\commons-codec\\commons-codec\\1.9\\commons-codec-1.9.jar;C:\\Users\\Administrator\\.m2\\repository\\commons-io\\commons-io\\2.4\\commons-io-2.4.jar;C:\\Users\\Administrator\\.m2\\repository\\commons-lang\\commons-lang\\2.6\\commons-lang-2.6.jar;C:\\Users\\Administrator\\.m2\\repository\\commons-logging\\commons-logging\\1.2\\commons-logging-1.2.jar;C:\\Users\\Administrator\\.m2\\repository\\com\\google\\guava\\guava\\12.0.1\\guava-12.0.1.jar;C:\\Users\\Administrator\\.m2\\repository\\com\\google\\protobuf\\protobuf-java\\2.5.0\\protobuf-java-2.5.0.jar;C:\\Users\\Administrator\\.m2\\repository\\io\\netty\\netty-all\\4.1.17.Final\\netty-all-4.1.17.Final.jar;C:\\Users\\Administrator\\.m2\\repository\\org\\apache\\zookeeper\\zookeeper\\3.4.5-cdh5.13.0\\zookeeper-3.4.5-cdh5.13.0.jar;C:\\Users\\Administrator\\.m2\\repository\\org\\apache\\htrace\\htrace-core\\3.2.0-incubating\\htrace-core-3.2.0-incubating.jar;C:\\Users\\Administrator\\.m2\\repository\\org\\codehaus\\jackson\\jackson-mapper-asl\\1.8.8\\jackson-mapper-asl-1.8.8.jar;C:\\Users\\Administrator\\.m2\\repository\\org\\jruby\\jcodings\\jcodings\\1.0.8\\jcodings-1.0.8.jar;C:\\Users\\Administrator\\.m2\\repository\\org\\jruby\\joni\\joni\\2.1.2\\joni-2.1.2.jar;C:\\Users\\Administrator\\.m2\\repository\\com\\yammer\\metrics\\metrics-core\\2.2.0\\metrics-core-2.2.0.jar;C:\\Users\\Administrator\\.m2\\repository\\org\\apache\\hadoop\\hadoop-auth\\2.6.0-cdh5.13.0\\hadoop-auth-2.6.0-cdh5.13.0.jar;C:\\Users\\Administrator\\.m2\\repository\\org\\apache\\httpcomponents\\httpclient\\4.2.5\\httpclient-4.2.5.jar;C:\\Users\\Administrator\\.m2\\repository\\org\\apache\\httpcomponents\\httpcore\\4.2.4\\httpcore-4.2.4.jar;C:\\Users\\Administrator\\.m2\\repository\\org\\apache\\directory\\server\\apacheds-kerberos-codec\\2.0.0-M15\\apacheds-kerberos-codec-2.0.0-M15.jar;C:\\Users\\Administrator\\.m2\\repository\\org\\apache\\directory\\server\\apacheds-i18n\\2.0.0-M15\\apacheds-i18n-2.0.0-M15.jar;C:\\Users\\Administrator\\.m2\\repository\\org\\apache\\directory\\api\\api-asn1-api\\1.0.0-M20\\api-asn1-api-1.0.0-M20.jar;C:\\Users\\Administrator\\.m2\\repository\\org\\apache\\directory\\api\\api-util\\1.0.0-M20\\api-util-1.0.0-M20.jar;C:\\Users\\Administrator\\.m2\\repository\\org\\apache\\curator\\curator-framework\\2.7.1\\curator-framework-2.7.1.jar;C:\\Users\\Administrator\\.m2\\repository\\com\\github\\stephenc\\findbugs\\findbugs-annotations\\1.3.9-1\\findbugs-annotations-1.3.9-1.jar;C:\\Users\\Administrator\\.m2\\repository\\mysql\\mysql-connector-java\\5.1.44\\mysql-connector-java-5.1.44.jar;C:\\Users\\Administrator\\.m2\\repository\\org\\apache\\commons\\commons-jexl\\2.1.1\\commons-jexl-2.1.1.jar;C:\\Users\\Administrator\\.m2\\repository\\commons-dbcp\\commons-dbcp\\1.4\\commons-dbcp-1.4.jar;C:\\Users\\Administrator\\.m2\\repository\\commons-pool\\commons-pool\\1.5.4\\commons-pool-1.5.4.jar;C:\\Users\\Administrator\\.m2\\repository\\dom4j\\dom4j\\1.6.1\\dom4j-1.6.1.jar;C:\\Users\\Administrator\\.m2\\repository\\xml-apis\\xml-apis\\1.0.b2\\xml-apis-1.0.b2.jar;C:\\Users\\Administrator\\.m2\\repository\\com\\101tec\\zkclient\\0.7\\zkclient-0.7.jar;C:\\Users\\Administrator\\.m2\\repository\\org\\slf4j\\slf4j-api\\1.6.1\\slf4j-api-1.6.1.jar;C:\\Users\\Administrator\\.m2\\repository\\org\\slf4j\\slf4j-log4j12\\1.6.1\\slf4j-log4j12-1.6.1.jar;C:\\Users\\Administrator\\.m2\\repository\\log4j\\log4j\\1.2.15\\log4j-1.2.15.jar;C:\\Users\\Administrator\\.m2\\repository\\javax\\mail\\mail\\1.4\\mail-1.4.jar;C:\\Users\\Administrator\\.m2\\repository\\javax\\activation\\activation\\1.1\\activation-1.1.jar;C:\\Users\\Administrator\\.m2\\repository\\joda-time\\joda-time\\2.7\\joda-time-2.7.jar;C:\\Users\\Administrator\\.m2\\repository\\com\\github\\jsqlparser\\jsqlparser\\0.9.4\\jsqlparser-0.9.4.jar;C:\\Users\\Administrator\\.m2\\repository\\org\\json\\json\\20160810\\json-20160810.jar;C:\\Users\\Administrator\\.m2\\repository\\javax\\servlet\\jsp-api\\2.0\\jsp-api-2.0.jar;C:\\Users\\Administrator\\.m2\\repository\\javax\\servlet\\servlet-api\\2.4\\servlet-api-2.4.jar",
+    "StartTime" : 1527588595770,
+    "InputArguments" : [ "-Dfile.encoding=UTF-8" ],
+    "ManagementSpecVersion" : "1.2",
+    "SpecName" : "Java Virtual Machine Specification",
+    "SpecVendor" : "Oracle Corporation",
+    "SpecVersion" : "1.8",
+    "SystemProperties" : [ {
+      "key" : "sun.desktop",
+      "value" : "windows"
+    }, {
+      "key" : "awt.toolkit",
+      "value" : "sun.awt.windows.WToolkit"
+    }, {
+      "key" : "file.encoding.pkg",
+      "value" : "sun.io"
+    }, {
+      "key" : "java.specification.version",
+      "value" : "1.8"
+    }, {
+      "key" : "sun.cpu.isalist",
+      "value" : "amd64"
+    }, {
+      "key" : "sun.jnu.encoding",
+      "value" : "GBK"
+    }, {
+      "key" : "java.class.path",
+      "value" : "D:\\eclipse\\Workspaces\\MyEclipse\\starcor\\cdn\\cdn-query\\target\\classes;C:\\Users\\Administrator\\.m2\\repository\\com\\broadtech\\bdp-common-hadoop\\1.2.2-SNAPSHOT\\bdp-common-hadoop-1.2.2-SNAPSHOT.jar;C:\\Users\\Administrator\\.m2\\repository\\com\\broadtech\\bdp-common-util\\1.2.2-SNAPSHOT\\bdp-common-util-1.2.2-SNAPSHOT.jar;C:\\Users\\Administrator\\.m2\\repository\\org\\apache\\hadoop\\hadoop-client\\2.6.0-cdh5.13.0\\hadoop-client-2.6.0-cdh5.13.0.jar;C:\\Users\\Administrator\\.m2\\repository\\org\\apache\\hadoop\\hadoop-common\\2.6.0-cdh5.13.0\\hadoop-common-2.6.0-cdh5.13.0.jar;C:\\Users\\Administrator\\.m2\\repository\\commons-cli\\commons-cli\\1.2\\commons-cli-1.2.jar;C:\\Users\\Administrator\\.m2\\repository\\org\\apache\\commons\\commons-math3\\3.1.1\\commons-math3-3.1.1.jar;C:\\Users\\Administrator\\.m2\\repository\\xmlenc\\xmlenc\\0.52\\xmlenc-0.52.jar;C:\\Users\\Administrator\\.m2\\repository\\commons-httpclient\\commons-httpclient\\3.1\\commons-httpclient-3.1.jar;C:\\Users\\Administrator\\.m2\\repository\\commons-net\\commons-net\\3.1\\commons-net-3.1.jar;C:\\Users\\Administrator\\.m2\\repository\\commons-collections\\commons-collections\\3.2.2\\commons-collections-3.2.2.jar;C:\\Users\\Administrator\\.m2\\repository\\commons-configuration\\commons-configuration\\1.9\\commons-configuration-1.9.jar;C:\\Users\\Administrator\\.m2\\repository\\org\\codehaus\\jackson\\jackson-core-asl\\1.8.8\\jackson-core-asl-1.8.8.jar;C:\\Users\\Administrator\\.m2\\repository\\org\\apache\\avro\\avro\\1.7.6-cdh5.13.0\\avro-1.7.6-cdh5.13.0.jar;C:\\Users\\Administrator\\.m2\\repository\\com\\thoughtworks\\paranamer\\paranamer\\2.3\\paranamer-2.3.jar;C:\\Users\\Administrator\\.m2\\repository\\org\\xerial\\snappy\\snappy-java\\1.0.4.1\\snappy-java-1.0.4.1.jar;C:\\Users\\Administrator\\.m2\\repository\\com\\google\\code\\gson\\gson\\2.2.4\\gson-2.2.4.jar;C:\\Users\\Administrator\\.m2\\repository\\org\\apache\\curator\\curator-client\\2.7.1\\curator-client-2.7.1.jar;C:\\Users\\Administrator\\.m2\\repository\\org\\apache\\curator\\curator-recipes\\2.7.1\\curator-recipes-2.7.1.jar;C:\\Users\\Administrator\\.m2\\repository\\com\\google\\code\\findbugs\\jsr305\\3.0.0\\jsr305-3.0.0.jar;C:\\Users\\Administrator\\.m2\\repository\\org\\apache\\htrace\\htrace-core4\\4.0.1-incubating\\htrace-core4-4.0.1-incubating.jar;C:\\Users\\Administrator\\.m2\\repository\\org\\apache\\commons\\commons-compress\\1.4.1\\commons-compress-1.4.1.jar;C:\\Users\\Administrator\\.m2\\repository\\org\\tukaani\\xz\\1.0\\xz-1.0.jar;C:\\Users\\Administrator\\.m2\\repository\\org\\apache\\hadoop\\hadoop-hdfs\\2.6.0-cdh5.13.0\\hadoop-hdfs-2.6.0-cdh5.13.0.jar;C:\\Users\\Administrator\\.m2\\repository\\org\\mortbay\\jetty\\jetty-util\\6.1.26.cloudera.4\\jetty-util-6.1.26.cloudera.4.jar;C:\\Users\\Administrator\\.m2\\repository\\io\\netty\\netty\\3.10.5.Final\\netty-3.10.5.Final.jar;C:\\Users\\Administrator\\.m2\\repository\\xerces\\xercesImpl\\2.9.1\\xercesImpl-2.9.1.jar;C:\\Users\\Administrator\\.m2\\repository\\org\\fusesource\\leveldbjni\\leveldbjni-all\\1.8\\leveldbjni-all-1.8.jar;C:\\Users\\Administrator\\.m2\\repository\\org\\apache\\hadoop\\hadoop-mapreduce-client-app\\2.6.0-cdh5.13.0\\hadoop-mapreduce-client-app-2.6.0-cdh5.13.0.jar;C:\\Users\\Administrator\\.m2\\repository\\org\\apache\\hadoop\\hadoop-mapreduce-client-common\\2.6.0-cdh5.13.0\\hadoop-mapreduce-client-common-2.6.0-cdh5.13.0.jar;C:\\Users\\Administrator\\.m2\\repository\\org\\apache\\hadoop\\hadoop-yarn-client\\2.6.0-cdh5.13.0\\hadoop-yarn-client-2.6.0-cdh5.13.0.jar;C:\\Users\\Administrator\\.m2\\repository\\org\\apache\\hadoop\\hadoop-yarn-server-common\\2.6.0-cdh5.13.0\\hadoop-yarn-server-common-2.6.0-cdh5.13.0.jar;C:\\Users\\Administrator\\.m2\\repository\\org\\apache\\hadoop\\hadoop-mapreduce-client-shuffle\\2.6.0-cdh5.13.0\\hadoop-mapreduce-client-shuffle-2.6.0-cdh5.13.0.jar;C:\\Users\\Administrator\\.m2\\repository\\org\\apache\\hadoop\\hadoop-yarn-api\\2.6.0-cdh5.13.0\\hadoop-yarn-api-2.6.0-cdh5.13.0.jar;C:\\Users\\Administrator\\.m2\\repository\\org\\apache\\hadoop\\hadoop-mapreduce-client-core\\2.6.0-cdh5.13.0\\hadoop-mapreduce-client-core-2.6.0-cdh5.13.0.jar;C:\\Users\\Administrator\\.m2\\repository\\org\\apache\\hadoop\\hadoop-yarn-common\\2.6.0-cdh5.13.0\\hadoop-yarn-common-2.6.0-cdh5.13.0.jar;C:\\Users\\Administrator\\.m2\\repository\\javax\\xml\\bind\\jaxb-api\\2.2.2\\jaxb-api-2.2.2.jar;C:\\Users\\Administrator\\.m2\\repository\\javax\\xml\\stream\\stax-api\\1.0-2\\stax-api-1.0-2.jar;C:\\Users\\Administrator\\.m2\\repository\\com\\sun\\jersey\\jersey-core\\1.9\\jersey-core-1.9.jar;C:\\Users\\Administrator\\.m2\\repository\\com\\sun\\jersey\\jersey-client\\1.9\\jersey-client-1.9.jar;C:\\Users\\Administrator\\.m2\\repository\\org\\codehaus\\jackson\\jackson-jaxrs\\1.8.8\\jackson-jaxrs-1.8.8.jar;C:\\Users\\Administrator\\.m2\\repository\\org\\codehaus\\jackson\\jackson-xc\\1.8.8\\jackson-xc-1.8.8.jar;C:\\Users\\Administrator\\.m2\\repository\\org\\apache\\hadoop\\hadoop-mapreduce-client-jobclient\\2.6.0-cdh5.13.0\\hadoop-mapreduce-client-jobclient-2.6.0-cdh5.13.0.jar;C:\\Users\\Administrator\\.m2\\repository\\org\\apache\\hadoop\\hadoop-annotations\\2.6.0-cdh5.13.0\\hadoop-annotations-2.6.0-cdh5.13.0.jar;C:\\Users\\Administrator\\.m2\\repository\\org\\apache\\hbase\\hbase-client\\1.2.0-cdh5.13.0\\hbase-client-1.2.0-cdh5.13.0.jar;C:\\Users\\Administrator\\.m2\\repository\\org\\apache\\hbase\\hbase-annotations\\1.2.0-cdh5.13.0\\hbase-annotations-1.2.0-cdh5.13.0.jar;C:\\Users\\Administrator\\.m2\\repository\\org\\apache\\hbase\\hbase-common\\1.2.0-cdh5.13.0\\hbase-common-1.2.0-cdh5.13.0.jar;C:\\Users\\Administrator\\.m2\\repository\\org\\apache\\hadoop\\hadoop-core\\2.6.0-mr1-cdh5.13.0\\hadoop-core-2.6.0-mr1-cdh5.13.0.jar;C:\\Users\\Administrator\\.m2\\repository\\org\\mortbay\\jetty\\jetty\\6.1.26.cloudera.4\\jetty-6.1.26.cloudera.4.jar;C:\\Users\\Administrator\\.m2\\repository\\tomcat\\jasper-runtime\\5.5.23\\jasper-runtime-5.5.23.jar;C:\\Users\\Administrator\\.m2\\repository\\tomcat\\jasper-compiler\\5.5.23\\jasper-compiler-5.5.23.jar;C:\\Users\\Administrator\\.m2\\repository\\commons-el\\commons-el\\1.0\\commons-el-1.0.jar;C:\\Users\\Administrator\\.m2\\repository\\net\\java\\dev\\jets3t\\jets3t\\0.6.1\\jets3t-0.6.1.jar;C:\\Users\\Administrator\\.m2\\repository\\hsqldb\\hsqldb\\1.8.0.10\\hsqldb-1.8.0.10.jar;C:\\Users\\Administrator\\.m2\\repository\\org\\eclipse\\jdt\\core\\3.1.1\\core-3.1.1.jar;C:\\Users\\Administrator\\.m2\\repository\\org\\apache\\hbase\\hbase-protocol\\1.2.0-cdh5.13.0\\hbase-protocol-1.2.0-cdh5.13.0.jar;C:\\Users\\Administrator\\.m2\\repository\\commons-codec\\commons-codec\\1.9\\commons-codec-1.9.jar;C:\\Users\\Administrator\\.m2\\repository\\commons-io\\commons-io\\2.4\\commons-io-2.4.jar;C:\\Users\\Administrator\\.m2\\repository\\commons-lang\\commons-lang\\2.6\\commons-lang-2.6.jar;C:\\Users\\Administrator\\.m2\\repository\\commons-logging\\commons-logging\\1.2\\commons-logging-1.2.jar;C:\\Users\\Administrator\\.m2\\repository\\com\\google\\guava\\guava\\12.0.1\\guava-12.0.1.jar;C:\\Users\\Administrator\\.m2\\repository\\com\\google\\protobuf\\protobuf-java\\2.5.0\\protobuf-java-2.5.0.jar;C:\\Users\\Administrator\\.m2\\repository\\io\\netty\\netty-all\\4.1.17.Final\\netty-all-4.1.17.Final.jar;C:\\Users\\Administrator\\.m2\\repository\\org\\apache\\zookeeper\\zookeeper\\3.4.5-cdh5.13.0\\zookeeper-3.4.5-cdh5.13.0.jar;C:\\Users\\Administrator\\.m2\\repository\\org\\apache\\htrace\\htrace-core\\3.2.0-incubating\\htrace-core-3.2.0-incubating.jar;C:\\Users\\Administrator\\.m2\\repository\\org\\codehaus\\jackson\\jackson-mapper-asl\\1.8.8\\jackson-mapper-asl-1.8.8.jar;C:\\Users\\Administrator\\.m2\\repository\\org\\jruby\\jcodings\\jcodings\\1.0.8\\jcodings-1.0.8.jar;C:\\Users\\Administrator\\.m2\\repository\\org\\jruby\\joni\\joni\\2.1.2\\joni-2.1.2.jar;C:\\Users\\Administrator\\.m2\\repository\\com\\yammer\\metrics\\metrics-core\\2.2.0\\metrics-core-2.2.0.jar;C:\\Users\\Administrator\\.m2\\repository\\org\\apache\\hadoop\\hadoop-auth\\2.6.0-cdh5.13.0\\hadoop-auth-2.6.0-cdh5.13.0.jar;C:\\Users\\Administrator\\.m2\\repository\\org\\apache\\httpcomponents\\httpclient\\4.2.5\\httpclient-4.2.5.jar;C:\\Users\\Administrator\\.m2\\repository\\org\\apache\\httpcomponents\\httpcore\\4.2.4\\httpcore-4.2.4.jar;C:\\Users\\Administrator\\.m2\\repository\\org\\apache\\directory\\server\\apacheds-kerberos-codec\\2.0.0-M15\\apacheds-kerberos-codec-2.0.0-M15.jar;C:\\Users\\Administrator\\.m2\\repository\\org\\apache\\directory\\server\\apacheds-i18n\\2.0.0-M15\\apacheds-i18n-2.0.0-M15.jar;C:\\Users\\Administrator\\.m2\\repository\\org\\apache\\directory\\api\\api-asn1-api\\1.0.0-M20\\api-asn1-api-1.0.0-M20.jar;C:\\Users\\Administrator\\.m2\\repository\\org\\apache\\directory\\api\\api-util\\1.0.0-M20\\api-util-1.0.0-M20.jar;C:\\Users\\Administrator\\.m2\\repository\\org\\apache\\curator\\curator-framework\\2.7.1\\curator-framework-2.7.1.jar;C:\\Users\\Administrator\\.m2\\repository\\com\\github\\stephenc\\findbugs\\findbugs-annotations\\1.3.9-1\\findbugs-annotations-1.3.9-1.jar;C:\\Users\\Administrator\\.m2\\repository\\mysql\\mysql-connector-java\\5.1.44\\mysql-connector-java-5.1.44.jar;C:\\Users\\Administrator\\.m2\\repository\\org\\apache\\commons\\commons-jexl\\2.1.1\\commons-jexl-2.1.1.jar;C:\\Users\\Administrator\\.m2\\repository\\commons-dbcp\\commons-dbcp\\1.4\\commons-dbcp-1.4.jar;C:\\Users\\Administrator\\.m2\\repository\\commons-pool\\commons-pool\\1.5.4\\commons-pool-1.5.4.jar;C:\\Users\\Administrator\\.m2\\repository\\dom4j\\dom4j\\1.6.1\\dom4j-1.6.1.jar;C:\\Users\\Administrator\\.m2\\repository\\xml-apis\\xml-apis\\1.0.b2\\xml-apis-1.0.b2.jar;C:\\Users\\Administrator\\.m2\\repository\\com\\101tec\\zkclient\\0.7\\zkclient-0.7.jar;C:\\Users\\Administrator\\.m2\\repository\\org\\slf4j\\slf4j-api\\1.6.1\\slf4j-api-1.6.1.jar;C:\\Users\\Administrator\\.m2\\repository\\org\\slf4j\\slf4j-log4j12\\1.6.1\\slf4j-log4j12-1.6.1.jar;C:\\Users\\Administrator\\.m2\\repository\\log4j\\log4j\\1.2.15\\log4j-1.2.15.jar;C:\\Users\\Administrator\\.m2\\repository\\javax\\mail\\mail\\1.4\\mail-1.4.jar;C:\\Users\\Administrator\\.m2\\repository\\javax\\activation\\activation\\1.1\\activation-1.1.jar;C:\\Users\\Administrator\\.m2\\repository\\joda-time\\joda-time\\2.7\\joda-time-2.7.jar;C:\\Users\\Administrator\\.m2\\repository\\com\\github\\jsqlparser\\jsqlparser\\0.9.4\\jsqlparser-0.9.4.jar;C:\\Users\\Administrator\\.m2\\repository\\org\\json\\json\\20160810\\json-20160810.jar;C:\\Users\\Administrator\\.m2\\repository\\javax\\servlet\\jsp-api\\2.0\\jsp-api-2.0.jar;C:\\Users\\Administrator\\.m2\\repository\\javax\\servlet\\servlet-api\\2.4\\servlet-api-2.4.jar"
+    }, {
+      "key" : "java.vm.vendor",
+      "value" : "Oracle Corporation"
+    }, {
+      "key" : "sun.arch.data.model",
+      "value" : "64"
+    }, {
+      "key" : "user.variant",
+      "value" : ""
+    }, {
+      "key" : "java.vendor.url",
+      "value" : "http://java.oracle.com/"
+    }, {
+      "key" : "user.timezone",
+      "value" : "Asia/Shanghai"
+    }, {
+      "key" : "os.name",
+      "value" : "Windows 8.1"
+    }, {
+      "key" : "java.vm.specification.version",
+      "value" : "1.8"
+    }, {
+      "key" : "user.country",
+      "value" : "CN"
+    }, {
+      "key" : "sun.java.launcher",
+      "value" : "SUN_STANDARD"
+    }, {
+      "key" : "sun.boot.library.path",
+      "value" : "C:\\Program Files\\Java\\jdk1.8.0_152\\jre\\bin"
+    }, {
+      "key" : "sun.java.command",
+      "value" : "com.broadtech.bdp.query.service.DataService"
+    }, {
+      "key" : "sun.cpu.endian",
+      "value" : "little"
+    }, {
+      "key" : "user.home",
+      "value" : "C:\\Users\\Administrator"
+    }, {
+      "key" : "user.language",
+      "value" : "zh"
+    }, {
+      "key" : "java.specification.vendor",
+      "value" : "Oracle Corporation"
+    }, {
+      "key" : "java.home",
+      "value" : "C:\\Program Files\\Java\\jdk1.8.0_152\\jre"
+    }, {
+      "key" : "file.separator",
+      "value" : "\\"
+    }, {
+      "key" : "line.separator",
+      "value" : "\r\n"
+    }, {
+      "key" : "java.vm.specification.vendor",
+      "value" : "Oracle Corporation"
+    }, {
+      "key" : "java.specification.name",
+      "value" : "Java Platform API Specification"
+    }, {
+      "key" : "java.awt.graphicsenv",
+      "value" : "sun.awt.Win32GraphicsEnvironment"
+    }, {
+      "key" : "sun.boot.class.path",
+      "value" : "C:\\Program Files\\Java\\jdk1.8.0_152\\jre\\lib\\resources.jar;C:\\Program Files\\Java\\jdk1.8.0_152\\jre\\lib\\rt.jar;C:\\Program Files\\Java\\jdk1.8.0_152\\jre\\lib\\sunrsasign.jar;C:\\Program Files\\Java\\jdk1.8.0_152\\jre\\lib\\jsse.jar;C:\\Program Files\\Java\\jdk1.8.0_152\\jre\\lib\\jce.jar;C:\\Program Files\\Java\\jdk1.8.0_152\\jre\\lib\\charsets.jar;C:\\Program Files\\Java\\jdk1.8.0_152\\jre\\lib\\jfr.jar;C:\\Program Files\\Java\\jdk1.8.0_152\\jre\\classes"
+    }, {
+      "key" : "user.script",
+      "value" : ""
+    }, {
+      "key" : "sun.management.compiler",
+      "value" : "HotSpot 64-Bit Tiered Compilers"
+    }, {
+      "key" : "java.runtime.version",
+      "value" : "1.8.0_152-b16"
+    }, {
+      "key" : "user.name",
+      "value" : "Administrator"
+    }, {
+      "key" : "path.separator",
+      "value" : ";"
+    }, {
+      "key" : "os.version",
+      "value" : "6.3"
+    }, {
+      "key" : "java.endorsed.dirs",
+      "value" : "C:\\Program Files\\Java\\jdk1.8.0_152\\jre\\lib\\endorsed"
+    }, {
+      "key" : "java.runtime.name",
+      "value" : "Java(TM) SE Runtime Environment"
+    }, {
+      "key" : "file.encoding",
+      "value" : "UTF-8"
+    }, {
+      "key" : "java.vm.name",
+      "value" : "Java HotSpot(TM) 64-Bit Server VM"
+    }, {
+      "key" : "java.vendor.url.bug",
+      "value" : "http://bugreport.sun.com/bugreport/"
+    }, {
+      "key" : "java.io.tmpdir",
+      "value" : "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\"
+    }, {
+      "key" : "java.version",
+      "value" : "1.8.0_152"
+    }, {
+      "key" : "user.dir",
+      "value" : "D:\\eclipse\\Workspaces\\MyEclipse\\starcor\\cdn\\cdn-query"
+    }, {
+      "key" : "os.arch",
+      "value" : "amd64"
+    }, {
+      "key" : "java.vm.specification.name",
+      "value" : "Java Virtual Machine Specification"
+    }, {
+      "key" : "java.awt.printerjob",
+      "value" : "sun.awt.windows.WPrinterJob"
+    }, {
+      "key" : "sun.os.patch.level",
+      "value" : ""
+    }, {
+      "key" : "java.library.path",
+      "value" : "C:\\Program Files\\Java\\jdk1.8.0_152\\bin;C:\\WINDOWS\\Sun\\Java\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Common Files\\NetSarang;C:\\oracle\\product\\10.2.0\\client_1\\bin;C:\\oracle\\product\\10.2.0\\db_1\\bin;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\Java\\jdk1.8.0_152\\bin;C:\\Program Files (x86)\\Microsoft SQL Server\\100\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\100\\DTS\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\100\\Tools\\Binn\\VSShell\\Common7\\IDE\\;C:\\Program Files (x86)\\Microsoft Visual Studio 9.0\\Common7\\IDE\\PrivateAssemblies\\;C:\\server\\apache-maven-3.5.2\\bin;C:\\mongodb-win32-x86_64-2.4.3\\bin\\;C:\\Program Files (x86)\\scala\\bin;C:\\Program Files\\SlikSvn\\bin;C:\\HashiCorp\\Vagrant\\bin;C:\\Python27;C:\\server\\gradle-4.5\\bin;;."
+    }, {
+      "key" : "java.vm.info",
+      "value" : "mixed mode"
+    }, {
+      "key" : "java.vendor",
+      "value" : "Oracle Corporation"
+    }, {
+      "key" : "java.vm.version",
+      "value" : "25.152-b16"
+    }, {
+      "key" : "java.ext.dirs",
+      "value" : "C:\\Program Files\\Java\\jdk1.8.0_152\\jre\\lib\\ext;C:\\WINDOWS\\Sun\\Java\\lib\\ext"
+    }, {
+      "key" : "sun.io.unicode.encoding",
+      "value" : "UnicodeLittle"
+    }, {
+      "key" : "java.class.version",
+      "value" : "52.0"
+    } ],
+    "BootClassPath" : "C:\\Program Files\\Java\\jdk1.8.0_152\\jre\\lib\\resources.jar;C:\\Program Files\\Java\\jdk1.8.0_152\\jre\\lib\\rt.jar;C:\\Program Files\\Java\\jdk1.8.0_152\\jre\\lib\\sunrsasign.jar;C:\\Program Files\\Java\\jdk1.8.0_152\\jre\\lib\\jsse.jar;C:\\Program Files\\Java\\jdk1.8.0_152\\jre\\lib\\jce.jar;C:\\Program Files\\Java\\jdk1.8.0_152\\jre\\lib\\charsets.jar;C:\\Program Files\\Java\\jdk1.8.0_152\\jre\\lib\\jfr.jar;C:\\Program Files\\Java\\jdk1.8.0_152\\jre\\classes",
+    "LibraryPath" : "C:\\Program Files\\Java\\jdk1.8.0_152\\bin;C:\\WINDOWS\\Sun\\Java\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Common Files\\NetSarang;C:\\oracle\\product\\10.2.0\\client_1\\bin;C:\\oracle\\product\\10.2.0\\db_1\\bin;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\Java\\jdk1.8.0_152\\bin;C:\\Program Files (x86)\\Microsoft SQL Server\\100\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\100\\DTS\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\100\\Tools\\Binn\\VSShell\\Common7\\IDE\\;C:\\Program Files (x86)\\Microsoft Visual Studio 9.0\\Common7\\IDE\\PrivateAssemblies\\;C:\\server\\apache-maven-3.5.2\\bin;C:\\mongodb-win32-x86_64-2.4.3\\bin\\;C:\\Program Files (x86)\\scala\\bin;C:\\Program Files\\SlikSvn\\bin;C:\\HashiCorp\\Vagrant\\bin;C:\\Python27;C:\\server\\gradle-4.5\\bin;;.",
+    "Uptime" : 41199,
+    "VmName" : "Java HotSpot(TM) 64-Bit Server VM",
+    "VmVendor" : "Oracle Corporation",
+    "VmVersion" : "25.152-b16",
+    "BootClassPathSupported" : true,
+    "ObjectName" : "java.lang:type=Runtime"
+  }, {
+    "name" : "java.lang:type=Threading",
+    "modelerType" : "sun.management.ThreadImpl",
+    "ThreadAllocatedMemoryEnabled" : true,
+    "ThreadAllocatedMemorySupported" : true,
+    "DaemonThreadCount" : 9,
+    "PeakThreadCount" : 14,
+    "CurrentThreadCpuTimeSupported" : true,
+    "ObjectMonitorUsageSupported" : true,
+    "SynchronizerUsageSupported" : true,
+    "ThreadContentionMonitoringSupported" : true,
+    "ThreadCpuTimeEnabled" : true,
+    "CurrentThreadCpuTime" : 46875000,
+    "CurrentThreadUserTime" : 46875000,
+    "ThreadCount" : 14,
+    "TotalStartedThreadCount" : 16,
+    "ThreadCpuTimeSupported" : true,
+    "AllThreadIds" : [ 23, 22, 21, 20, 18, 17, 16, 15, 14, 13, 5, 4, 3, 2 ],
+    "ThreadContentionMonitoringEnabled" : false,
+    "ObjectName" : "java.lang:type=Threading"
+  }, {
+    "name" : "java.lang:type=OperatingSystem",
+    "modelerType" : "sun.management.OperatingSystemImpl",
+    "CommittedVirtualMemorySize" : 240349184,
+    "FreePhysicalMemorySize" : 1986875392,
+    "FreeSwapSpaceSize" : 3940057088,
+    "ProcessCpuLoad" : 0.04152757696887226,
+    "ProcessCpuTime" : 4921875000,
+    "SystemCpuLoad" : -1.0,
+    "TotalPhysicalMemorySize" : 8469966848,
+    "TotalSwapSpaceSize" : 14644936704,
+    "Name" : "Windows 8.1",
+    "Version" : "6.3",
+    "Arch" : "amd64",
+    "SystemLoadAverage" : -1.0,
+    "AvailableProcessors" : 8,
+    "ObjectName" : "java.lang:type=OperatingSystem"
+  }, {
+    "name" : "java.lang:type=MemoryPool,name=Code Cache",
+    "modelerType" : "sun.management.MemoryPoolImpl",
+    "Name" : "Code Cache",
+    "Type" : "NON_HEAP",
+    "Valid" : true,
+    "CollectionUsage" : null,
+    "MemoryManagerNames" : [ "CodeCacheManager" ],
+    "PeakUsage" : {
+      "committed" : 6684672,
+      "init" : 2555904,
+      "max" : 251658240,
+      "used" : 6625344
+    },
+    "Usage" : {
+      "committed" : 6684672,
+      "init" : 2555904,
+      "max" : 251658240,
+      "used" : 6623232
+    },
+    "UsageThreshold" : 0,
+    "UsageThresholdCount" : 0,
+    "CollectionUsageThresholdSupported" : false,
+    "UsageThresholdExceeded" : false,
+    "UsageThresholdSupported" : true,
+    "ObjectName" : "java.lang:type=MemoryPool,name=Code Cache"
+  }, {
+    "name" : "bdp.metrics:type=brd_query",
+    "modelerType" : "com.broadtech.bdp.common.metrics.JmxReporter$CommonMbean",
+    "bdp_metrics_count" : 10.0
+  }, {
+    "name" : "java.nio:type=BufferPool,name=direct",
+    "modelerType" : "sun.management.ManagementFactoryHelper$1",
+    "Name" : "direct",
+    "MemoryUsed" : 155648,
+    "TotalCapacity" : 155648,
+    "Count" : 3,
+    "ObjectName" : "java.nio:type=BufferPool,name=direct"
+  }, {
+    "name" : "java.lang:type=Compilation",
+    "modelerType" : "sun.management.CompilationImpl",
+    "Name" : "HotSpot 64-Bit Tiered Compilers",
+    "CompilationTimeMonitoringSupported" : true,
+    "TotalCompilationTime" : 2214,
+    "ObjectName" : "java.lang:type=Compilation"
+  }, {
+    "name" : "bdp.metrics:type=query",
+    "modelerType" : "com.broadtech.bdp.common.metrics.JmxReporter$CommonMbean",
+    "bdp_query_duration_min" : 0.0,
+    "bdp_query_duration_avg" : 0.0,
+    "bdp_query_sessions_count" : 0.0,
+    "bdp_query_requests_1min_rate" : 0.0,
+    "bdp_query_active_split_threads_count" : 0.0,
+    "bdp_query_connections_count" : 0.0,
+    "bdp_query_replys_total" : 0.0,
+    "bdp_query_requests_count" : 0.0,
+    "bdp_query_duration_max" : 0.0
+  }, {
+    "name" : "java.lang:type=MemoryManager,name=CodeCacheManager",
+    "modelerType" : "sun.management.MemoryManagerImpl",
+    "Name" : "CodeCacheManager",
+    "Valid" : true,
+    "MemoryPoolNames" : [ "Code Cache" ],
+    "ObjectName" : "java.lang:type=MemoryManager,name=CodeCacheManager"
+  }, {
+    "name" : "java.lang:type=MemoryPool,name=Compressed Class Space",
+    "modelerType" : "sun.management.MemoryPoolImpl",
+    "Name" : "Compressed Class Space",
+    "Type" : "NON_HEAP",
+    "Valid" : true,
+    "CollectionUsage" : null,
+    "MemoryManagerNames" : [ "Metaspace Manager" ],
+    "PeakUsage" : {
+      "committed" : 2752512,
+      "init" : 0,
+      "max" : 1073741824,
+      "used" : 2636392
+    },
+    "Usage" : {
+      "committed" : 2752512,
+      "init" : 0,
+      "max" : 1073741824,
+      "used" : 2636392
+    },
+    "UsageThreshold" : 0,
+    "UsageThresholdCount" : 0,
+    "CollectionUsageThresholdSupported" : false,
+    "UsageThresholdExceeded" : false,
+    "UsageThresholdSupported" : true,
+    "ObjectName" : "java.lang:type=MemoryPool,name=Compressed Class Space"
+  }, {
+    "name" : "java.lang:type=Memory",
+    "modelerType" : "sun.management.MemoryImpl",
+    "Verbose" : false,
+    "HeapMemoryUsage" : {
+      "committed" : 79691776,
+      "init" : 134217728,
+      "max" : 1883242496,
+      "used" : 6539064
+    },
+    "NonHeapMemoryUsage" : {
+      "committed" : 31506432,
+      "init" : 2555904,
+      "max" : -1,
+      "used" : 30637904
+    },
+    "ObjectPendingFinalizationCount" : 0,
+    "ObjectName" : "java.lang:type=Memory"
+  }, {
+    "name" : "java.nio:type=BufferPool,name=mapped",
+    "modelerType" : "sun.management.ManagementFactoryHelper$1",
+    "Name" : "mapped",
+    "MemoryUsed" : 0,
+    "TotalCapacity" : 0,
+    "Count" : 0,
+    "ObjectName" : "java.nio:type=BufferPool,name=mapped"
+  }, {
+    "name" : "java.util.logging:type=Logging",
+    "modelerType" : "sun.management.ManagementFactoryHelper$PlatformLoggingImpl",
+    "ObjectName" : "java.util.logging:type=Logging",
+    "LoggerNames" : [ "javax.management.notification", "javax.management.timer", "javax.management.modelmbean", "com.google.common.cache.CacheBuilder", "com.sun.xml.internal.ws.wspolicy.com.sun.xml.internal.ws.addressing.policy.AddressingFeatureConfigurator", "com.sun.xml.internal.ws.wspolicy.sourcemodel.XmlPolicyModelMarshaller", "com.sun.xml.internal.ws.wspolicy.PolicyMapMutator", "com.sun.xml.internal.ws.wspolicy.jaxws.PolicyWSDLGeneratorExtension", "javax.management.mbeanserver", "com.sun.xml.internal.bind.v2.runtime.reflect.opt.OptimizedAccessorFactory", "com.sun.xml.internal.ws.wspolicy.privateutil.ServiceFinder", "com.sun.xml.internal.bind.v2.bytecode.ClassTailor", "com.sun.xml.internal.ws.wspolicy.sourcemodel.CompactModelGenerator", "com.sun.xml.internal.bind.v2.runtime.ClassBeanInfoImpl", "com.sun.xml.internal.ws.transport.http.HttpAdapter", "com.sun.xml.internal.ws.wsdl.PayloadQNameBasedOperationFinder", "com.sun.xml.internal.ws.wspolicy.sourcemodel.PolicyModelGenerator", "com.sun.xml.internal.ws.wspolicy.jaxws.SafePolicyReader", "com.sun.xml.internal.bind.v2.schemagen.FoolProofResolver", "global", "com.sun.xml.internal.ws.model.WrapperBeanGenerator", "com.sun.xml.internal.ws.wspolicy.com.sun.xml.internal.ws.addressing.policy.AddressingPolicyMapConfigurator", "com.sun.xml.internal.ws.util", "com.sun.xml.internal.ws.binding.WebServiceFeatureList", "com.sun.xml.internal.ws.wsdl.writer.W3CAddressingWSDLGeneratorExtension", "com.sun.xml.internal.ws.wspolicy.com.sun.xml.internal.ws.addressing.policy.AddressingPolicyValidator", "com.sun.xml.internal.ws.spi.db.BindingContextFactory", "com.sun.xml.internal.ws.monitoring", "com.sun.xml.internal.ws.wspolicy.jaxws.PolicyWSDLParserExtension", "com.sun.net.httpserver", "com.sun.xml.internal.bind.v2.runtime.JaxBeanInfo", "javax.activation", "com.sun.xml.internal.bind.v2.runtime.reflect.Utils", "com.sun.xml.internal.ws.transport.http.server.ServerAdapter", "com.sun.xml.internal.bind.v2.runtime.reflect.opt.OptimizedTransducedAccessorFactory", "com.sun.xml.internal.ws.wsdl.parser.RuntimeWSDLParser", "javax.management.snmp", "javax.management", "com.sun.xml.internal.ws.model.AbstractWrapperBeanGenerator", "com.sun.xml.internal.bind.v2.runtime.reflect.opt.Injector", "com.sun.xml.internal.bind.v2.ClassFactory", "com.sun.xml.internal.ws.server.http", "com.sun.xml.internal.fastinfoset.stax.StAXDocumentParser", "com.sun.xml.internal.messaging.saaj.soap", "com.sun.xml.internal.bind.v2.runtime.reflect.opt.AccessorInjector", "com.sun.xml.internal.ws.server.sei.TieHandler", "com.sun.xml.internal.ws.model.JavaMethodImpl", "javax.management.misc", "javax.management.monitor", "com.sun.xml.internal.ws.model.AbstractSEIModelImpl", "javax.xml.bind", "com.sun.xml.internal.ws.wspolicy.com.sun.xml.internal.ws.encoding.policy.MtomPolicyMapConfigurator", "com.sun.xml.internal.ws.wspolicy.AssertionValidationProcessor", "javax.management.mlet", "com.google.common.cache.LocalCache", "com.sun.xml.internal.bind.v2.model.impl.Utils", "com.sun.xml.internal.ws.wspolicy.PolicyMapKey", "com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallingContext", "com.sun.xml.internal.ws.model.Utils", "com.sun.metro.assembler", "com.sun.xml.internal.ws.wspolicy.jaxws.PolicyUtil", "com.sun.xml.internal.ws.wspolicy.PolicyMapUtil", "com.sun.xml.internal.bind.v2.runtime.property.Utils", "com.sun.xml.internal.ws.wsdl.writer.W3CAddressingMetadataWSDLGeneratorExtension", "javax.management.relation", "com.sun.xml.internal.ws.model.Injector", "com.sun.xml.internal.bind.v2.schemagen.XmlSchemaGenerator", "com.sun.xml.internal.bind.v2.runtime.Utils", "com.sun.xml.internal.ws.soap.decoder", "com.sun.xml.internal.bind.v2.runtime.reflect.Accessor$FieldReflection", "com.sun.xml.internal.ws.api.pipe.TubelineAssemblerFactory", "com.sun.xml.internal.ws.wspolicy.subject.PolicyMapKeyConverter", "com.sun.xml.internal.ws.api.streaming.XMLStreamReaderFactory", "javax.management.snmp.daemon", "com.sun.xml.internal.ws.server", "com.sun.xml.internal.ws.server.endpoint", "com.sun.xml.internal.ws.util.xml.XmlUtil", "com.sun.xml.internal.ws.addressing.WsaActionUtil", "com.sun.metro.config", "com.sun.xml.internal.bind.v2.model.impl.ModelBuilder", "", "com.sun.xml.internal.ws.wspolicy.PolicyMap" ]
+  }, {
+    "name" : "java.lang:type=MemoryPool,name=PS Survivor Space",
+    "modelerType" : "sun.management.MemoryPoolImpl",
+    "Name" : "PS Survivor Space",
+    "Type" : "HEAP",
+    "Valid" : true,
+    "CollectionUsage" : {
+      "committed" : 5242880,
+      "init" : 5242880,
+      "max" : 5242880,
+      "used" : 0
+    },
+    "CollectionUsageThreshold" : 0,
+    "CollectionUsageThresholdCount" : 0,
+    "MemoryManagerNames" : [ "PS MarkSweep", "PS Scavenge" ],
+    "PeakUsage" : {
+      "committed" : 5242880,
+      "init" : 5242880,
+      "max" : 5242880,
+      "used" : 5217224
+    },
+    "Usage" : {
+      "committed" : 5242880,
+      "init" : 5242880,
+      "max" : 5242880,
+      "used" : 0
+    },
+    "CollectionUsageThresholdExceeded" : false,
+    "CollectionUsageThresholdSupported" : true,
+    "UsageThresholdSupported" : false,
+    "ObjectName" : "java.lang:type=MemoryPool,name=PS Survivor Space"
+  }, {
+    "name" : "java.lang:type=ClassLoading",
+    "modelerType" : "sun.management.ClassLoadingImpl",
+    "LoadedClassCount" : 3881,
+    "UnloadedClassCount" : 0,
+    "TotalLoadedClassCount" : 3881,
+    "Verbose" : false,
+    "ObjectName" : "java.lang:type=ClassLoading"
+  }, {
+    "name" : "java.lang:type=MemoryManager,name=Metaspace Manager",
+    "modelerType" : "sun.management.MemoryManagerImpl",
+    "Name" : "Metaspace Manager",
+    "Valid" : true,
+    "MemoryPoolNames" : [ "Metaspace", "Compressed Class Space" ],
+    "ObjectName" : "java.lang:type=MemoryManager,name=Metaspace Manager"
+  }, {
+    "name" : "com.sun.management:type=DiagnosticCommand",
+    "modelerType" : "sun.management.DiagnosticCommandImpl"
+  }, {
+    "name" : "java.lang:type=GarbageCollector,name=PS MarkSweep",
+    "modelerType" : "sun.management.GarbageCollectorImpl",
+    "LastGcInfo" : {
+      "GcThreadCount" : 8,
+      "duration" : 39,
+      "endTime" : 41095,
+      "id" : 1,
+      "memoryUsageAfterGc" : [ {
+        "key" : "Compressed Class Space",
+        "value" : {
+          "committed" : 2752512,
+          "init" : 0,
+          "max" : 1073741824,
+          "used" : 2632200
+        }
+      }, {
+        "key" : "PS Survivor Space",
+        "value" : {
+          "committed" : 5242880,
+          "init" : 5242880,
+          "max" : 5242880,
+          "used" : 0
+        }
+      }, {
+        "key" : "PS Old Gen",
+        "value" : {
+          "committed" : 40370176,
+          "init" : 89653248,
+          "max" : 1412431872,
+          "used" : 5541360
+        }
+      }, {
+        "key" : "Metaspace",
+        "value" : {
+          "committed" : 21807104,
+          "init" : 0,
+          "max" : -1,
+          "used" : 21300504
+        }
+      }, {
+        "key" : "PS Eden Space",
+        "value" : {
+          "committed" : 34078720,
+          "init" : 34078720,
+          "max" : 695205888,
+          "used" : 0
+        }
+      }, {
+        "key" : "Code Cache",
+        "value" : {
+          "committed" : 6488064,
+          "init" : 2555904,
+          "max" : 251658240,
+          "used" : 6462016
+        }
+      } ],
+      "memoryUsageBeforeGc" : [ {
+        "key" : "Compressed Class Space",
+        "value" : {
+          "committed" : 2752512,
+          "init" : 0,
+          "max" : 1073741824,
+          "used" : 2632200
+        }
+      }, {
+        "key" : "PS Survivor Space",
+        "value" : {
+          "committed" : 5242880,
+          "init" : 5242880,
+          "max" : 5242880,
+          "used" : 5210192
+        }
+      }, {
+        "key" : "PS Old Gen",
+        "value" : {
+          "committed" : 89653248,
+          "init" : 89653248,
+          "max" : 1412431872,
+          "used" : 726016
+        }
+      }, {
+        "key" : "Metaspace",
+        "value" : {
+          "committed" : 21807104,
+          "init" : 0,
+          "max" : -1,
+          "used" : 21300504
+        }
+      }, {
+        "key" : "PS Eden Space",
+        "value" : {
+          "committed" : 34078720,
+          "init" : 34078720,
+          "max" : 695205888,
+          "used" : 0
+        }
+      }, {
+        "key" : "Code Cache",
+        "value" : {
+          "committed" : 6488064,
+          "init" : 2555904,
+          "max" : 251658240,
+          "used" : 6462016
+        }
+      } ],
+      "startTime" : 41056
+    },
+    "CollectionCount" : 1,
+    "CollectionTime" : 39,
+    "Name" : "PS MarkSweep",
+    "Valid" : true,
+    "MemoryPoolNames" : [ "PS Eden Space", "PS Survivor Space", "PS Old Gen" ],
+    "ObjectName" : "java.lang:type=GarbageCollector,name=PS MarkSweep"
+  }, {
+    "name" : "com.sun.management:type=HotSpotDiagnostic",
+    "modelerType" : "sun.management.HotSpotDiagnostic",
+    "DiagnosticOptions" : [ {
+      "name" : "HeapDumpBeforeFullGC",
+      "origin" : "DEFAULT",
+      "value" : "false",
+      "writeable" : true
+    }, {
+      "name" : "HeapDumpAfterFullGC",
+      "origin" : "DEFAULT",
+      "value" : "false",
+      "writeable" : true
+    }, {
+      "name" : "HeapDumpOnOutOfMemoryError",
+      "origin" : "DEFAULT",
+      "value" : "false",
+      "writeable" : true
+    }, {
+      "name" : "HeapDumpPath",
+      "origin" : "DEFAULT",
+      "value" : "",
+      "writeable" : true
+    }, {
+      "name" : "CMSAbortablePrecleanWaitMillis",
+      "origin" : "DEFAULT",
+      "value" : "100",
+      "writeable" : true
+    }, {
+      "name" : "CMSWaitDuration",
+      "origin" : "DEFAULT",
+      "value" : "2000",
+      "writeable" : true
+    }, {
+      "name" : "CMSTriggerInterval",
+      "origin" : "DEFAULT",
+      "value" : "-1",
+      "writeable" : true
+    }, {
+      "name" : "PrintGC",
+      "origin" : "DEFAULT",
+      "value" : "false",
+      "writeable" : true
+    }, {
+      "name" : "PrintGCDetails",
+      "origin" : "DEFAULT",
+      "value" : "false",
+      "writeable" : true
+    }, {
+      "name" : "PrintGCDateStamps",
+      "origin" : "DEFAULT",
+      "value" : "false",
+      "writeable" : true
+    }, {
+      "name" : "PrintGCTimeStamps",
+      "origin" : "DEFAULT",
+      "value" : "false",
+      "writeable" : true
+    }, {
+      "name" : "PrintGCID",
+      "origin" : "DEFAULT",
+      "value" : "false",
+      "writeable" : true
+    }, {
+      "name" : "PrintClassHistogramBeforeFullGC",
+      "origin" : "DEFAULT",
+      "value" : "false",
+      "writeable" : true
+    }, {
+      "name" : "PrintClassHistogramAfterFullGC",
+      "origin" : "DEFAULT",
+      "value" : "false",
+      "writeable" : true
+    }, {
+      "name" : "PrintClassHistogram",
+      "origin" : "DEFAULT",
+      "value" : "false",
+      "writeable" : true
+    }, {
+      "name" : "MinHeapFreeRatio",
+      "origin" : "DEFAULT",
+      "value" : "0",
+      "writeable" : true
+    }, {
+      "name" : "MaxHeapFreeRatio",
+      "origin" : "DEFAULT",
+      "value" : "100",
+      "writeable" : true
+    }, {
+      "name" : "PrintConcurrentLocks",
+      "origin" : "DEFAULT",
+      "value" : "false",
+      "writeable" : true
+    }, {
+      "name" : "UnlockCommercialFeatures",
+      "origin" : "DEFAULT",
+      "value" : "false",
+      "writeable" : true
+    } ],
+    "ObjectName" : "com.sun.management:type=HotSpotDiagnostic"
+  } ]
+}

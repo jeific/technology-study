@@ -1,0 +1,22 @@
+doc 0
+  field 0
+    name nice
+    type string
+    value ok
+doc 1
+  field 1
+    name name
+    type string
+    value Tom
+doc 2
+  field 1
+    name name
+    type string
+    value Tom
+doc 3
+  field 2
+    name age
+    type string
+    value 10
+END
+checksum 00000000000674504671

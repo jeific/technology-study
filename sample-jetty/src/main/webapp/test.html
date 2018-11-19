@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Bootstrap 实例 - 折叠面板</title>
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script>
+        $(function () {
+            var map = {};
+            map["bdp-web"] = "";
+            map["bdp-agent"] = "";
+            if (map.hasOwnProperty("bdp-web")) {
+                console.log("bdp-web is exists");
+            }
+            console.log(map);
+            var showDiv = $("#accordion div .collapse.show");
+            console.log("find show div:" + showDiv.attr("id"))
+        });
+    </script>
+</head>
+<body>
+
+<div id="accordion">
+    <div class="card">
+        <div id="headingOne" class="card-header" data-toggle="collapse" data-target="#collapseOne">
+            <button type="button" class="btn btn-link collapsed">AppName</button>
+            <div class="" style="float:right;margin-right: 2%;">
+                <button class="badge badge-success" title="运行应用">5</button>
+                <button class="badge badge-danger" title="停止应用">0</button>
+                <button class="badge badge-warning" title="正在启动">5</button>
+                <button class="badge badge-secondary" title="no-health">1</button>
+            </div>
+        </div>
+
+        <div id="collapseOne" class="collapse show" data-parent="#accordion">
+            <div class="card-body" style="padding: 0;">
+                <button type="button" class="badge badge-secondary">no-health</button>
+                <button type="button" class="btn btn-light" title="AppName">AppName</button>
+                <button type="button" class="btn btn-light" title="host">host</button>
+                <button type="button" class="btn btn-light" title="appId">appId</button>
+                <button type="button" class="btn btn-light" title="heartbeat">heartbeat</button>
+                <div class="" style="float:right;margin-right: 2%;">
+                    <button class="btn btn-outline-info btn-sm" disabled>启动</button>
+                    <button class="btn btn-outline-info btn-sm">重启</button>
+                    <button class="btn btn-outline-info btn-sm">停止</button>
+                    <button class="btn btn-outline-info btn-sm">编辑</button>
+                    <button class="btn btn-outline-info btn-sm">删除</button>
+                </div>
+            </div>
+            <div class="card-body'" style="padding: 0;">
+                <button type="button" class="badge badge-secondary">no-health</button>
+                <button type="button" class="btn btn-light" title="AppName">AppName</button>
+                <button type="button" class="btn btn-light" title="host">host</button>
+                <button type="button" class="btn btn-light" title="appId">appId</button>
+                <button type="button" class="btn btn-light" title="heartbeat">heartbeat</button>
+                <div class="" style="float:right;margin-right: 2%;">
+                    <button class="btn btn-outline-info btn-sm">启动</button>
+                    <button class="btn btn-outline-info btn-sm">重启</button>
+                    <button class="btn btn-outline-info btn-sm">停止</button>
+                    <button class="btn btn-outline-info btn-sm">编辑</button>
+                    <button class="btn btn-outline-info btn-sm">删除</button>
+                </div>
+            </div>
+            <div class="card-body'" style="padding: 0;">
+                <button type="button" class="badge badge-secondary">no-health</button>
+                <button type="button" class="btn btn-light" title="AppName">AppName</button>
+                <button type="button" class="btn btn-light" title="host">host</button>
+                <button type="button" class="btn btn-light" title="appId">appId</button>
+                <button type="button" class="btn btn-light" title="heartbeat">heartbeat</button>
+                <div class="" style="float:right;margin-right: 2%;">
+                    <button class="btn btn-outline-info btn-sm">重启</button>
+                    <button class="btn btn-outline-info btn-sm">停止</button>
+                    <button class="btn btn-outline-info btn-sm">编辑</button>
+                    <button class="btn btn-outline-info btn-sm">删除</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="card">
+        <div class="card-header" id="headingTwo">
+            <h5 class="mb-0">
+                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo"
+                        aria-expanded="false" aria-controls="collapseTwo">
+                    Collapsible Group Item #2
+                </button>
+            </h5>
+        </div>
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+            <div class="card-body">
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf
+                moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa
+                nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin
+                coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer
+                labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
+                occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you
+                probably haven't heard of them accusamus labore sustainable VHS.
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header" id="headingThree">
+            <h5 class="mb-0">
+                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree"
+                        aria-expanded="false" aria-controls="collapseThree">
+                    Collapsible Group Item #3
+                </button>
+            </h5>
+        </div>
+        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+            <div class="card-body">
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf
+                moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa
+                nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin
+                coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer
+                labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
+                occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you
+                probably haven't heard of them accusamus labore sustainable VHS.
+            </div>
+        </div>
+    </div>
+</div>
+
+<button type='button' class='btn btn-outline-primary btn-sm' data-toggle='modal' data-target='#monitor-deploy-Modal'
+        onclick="test_deploy_onclick()">
+    deploy app
+</button>
+
+
+<div class="modal fade" id="monitor-deploy-Modal" tabindex="-1" role="dialog"
+     aria-labelledby="monitor-deploy-ModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="monitor-deploy-ModalLabel">部署引用</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            </div>
+            <div class="modal-body">
+                <form id="deploy-form" method="post">
+                    <div class="form-group">
+                        <input type="text" id="deploy-form-id" name="id" hidden value="hello world">
+                        <input type="text" id="deploy-form-appName" class="form-control" name="appName"
+                               placeholder="Application name">
+                    </div>
+                    <div class="form-group form-control" style="height: 80px;overflow: auto;">
+                        <!--<input type="text" id="deploy-form-hosts" class="form-control" name="hosts"-->
+                        <!--placeholder="hosts;多个主机以逗号风格; *表示集群内的所有主机">-->
+                        <div style="display: inline-block"><input type="checkbox" name="hosts" value="master01"><span style="white-space: pre;"> master01 </span></div>
+                        <div style="display: inline-block"><input type="checkbox" name="hosts" value="master02"><span style="white-space: pre;"> master02 </span></div>
+                        <div style="display: inline-block"><input type="checkbox" name="hosts" value="slave01"><span style="white-space: pre;"> slave01 </span></div>
+                        <div style="display: inline-block"><input type="checkbox" name="hosts" value="slave01"><span style="white-space: pre;"> slave01 </span></div>
+                        <div style="display: inline-block"><input type="checkbox" name="hosts" value="slave01"><span style="white-space: pre;"> slave01 </span></div>
+                        <div style="display: inline-block"><input type="checkbox" name="hosts" value="slave01"><span style="white-space: pre;"> slave01 </span></div>
+                        <div style="display: inline-block"><input type="checkbox" name="hosts" value="slave01"><span style="white-space: pre;"> slave01 </span></div>
+                        <div style="display: inline-block"><input type="checkbox" name="hosts" value="master01"><span style="white-space: pre;"> master01 </span></div>
+                        <div style="display: inline-block"><input type="checkbox" name="hosts" value="master02"><span style="white-space: pre;"> master02 </span></div>
+                        <div style="display: inline-block"><input type="checkbox" name="hosts" value="slave01"><span style="white-space: pre;"> slave01 </span></div>
+                        <div style="display: inline-block"><input type="checkbox" name="hosts" value="slave01"><span style="white-space: pre;"> slave01 </span></div>
+                        <div style="display: inline-block"><input type="checkbox" name="hosts" value="slave01"><span style="white-space: pre;"> slave01 </span></div>
+                        <div style="display: inline-block"><input type="checkbox" name="hosts" value="slave01"><span style="white-space: pre;"> slave01 </span></div>
+                        <div style="display: inline-block"><input type="checkbox" name="hosts" value="slave01"><span style="white-space: pre;"> slave01 </span></div>
+                        <div style="display: inline-block"><input type="checkbox" name="hosts" value="master01"><span style="white-space: pre;"> master01 </span></div>
+                        <div style="display: inline-block"><input type="checkbox" name="hosts" value="master02"><span style="white-space: pre;"> master02 </span></div>
+                        <div style="display: inline-block"><input type="checkbox" name="hosts" value="slave01"><span style="white-space: pre;"> slave01 </span></div>
+                        <div style="display: inline-block"><input type="checkbox" name="hosts" value="slave01"><span style="white-space: pre;"> slave01 </span></div>
+                        <div style="display: inline-block"><input type="checkbox" name="hosts" value="slave01"><span style="white-space: pre;"> slave01 </span></div>
+                        <div style="display: inline-block"><input type="checkbox" name="hosts" value="slave01"><span style="white-space: pre;"> slave01 </span></div>
+                        <div style="display: inline-block"><input type="checkbox" name="hosts" value="slave01"><span style="white-space: pre;"> slave01 </span></div>
+                        <div style="display: inline-block"><input type="checkbox" name="hosts" value="master01"><span style="white-space: pre;"> master01 </span></div>
+                        <div style="display: inline-block"><input type="checkbox" name="hosts" value="master02"><span style="white-space: pre;"> master02 </span></div>
+                        <div style="display: inline-block"><input type="checkbox" name="hosts" value="slave01"><span style="white-space: pre;"> slave01 </span></div>
+                        <div style="display: inline-block"><input type="checkbox" name="hosts" value="slave01"><span style="white-space: pre;"> slave01 </span></div>
+                        <div style="display: inline-block"><input type="checkbox" name="hosts" value="slave01"><span style="white-space: pre;"> slave01 </span></div>
+                        <div style="display: inline-block"><input type="checkbox" name="hosts" value="slave01"><span style="white-space: pre;"> slave01 </span></div>
+                        <div style="display: inline-block"><input type="checkbox" name="hosts" value="slave01"><span style="white-space: pre;"> slave01 </span></div>
+                    </div>
+                    <div class="form-group form-control">
+                        <label style="white-space: pre;color: #b21f2d;">App Type: </label>
+                        <input type="radio" value="SPARK" name="app_type"><span style="white-space: pre;"> SPARK </span>
+                        <input type="radio" value="LOCAL" name="app_type"><span style="white-space: pre;"> LOCAL </span>
+                        <input type="radio" value="NONE" name="app_type" title="代理平台对该类型应用忽略监控"><span style="white-space: pre;"> NONE</span>
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control" id="deploy-form-launch" name="launch" rows="3"></textarea>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                        <button type="submit" class="btn btn-primary" data-dismiss="modal" onclick="sync_save_deploy()">
+                            提交
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function test_deploy_onclick(tag) {
+        $("#deploy-form-appName").attr("value", "hello");
+    }
+</script>
+</body>
+</html>

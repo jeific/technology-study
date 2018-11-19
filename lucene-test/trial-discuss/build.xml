@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<project name="HelloWorld" default="test" basedir="">
+    <target name="test">
+        <echo message="test echo messsage, basedir=${basedir}" />
+    </target>
+    <target name="t2">
+        <echo message="This is second message."/>
+        <copy>
+        </copy>
+    </target>
+</project>

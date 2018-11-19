@@ -1,0 +1,298 @@
+{
+	"name": "BDP",
+	"label": "BDP",
+	"description": "BDP服务测试",
+	"version": "1.0.0",
+	"runAs": {
+		"user": "root",
+		"group": "root"
+	},
+	"compatibility": {
+		"generation": 1
+	},
+	"parcel": {
+		"requiredTags": [
+		"bdp-query"]
+	},
+	"icon": "images/icon.png",
+	"serviceDependencies" : [
+		{
+			"name" : "ZOOKEEPER",
+			"required" : "true"
+		},
+		{
+			"name" : "HBASE",
+			"required" : "true"
+		}
+  	],
+	"roles": [{
+		"name": "BRD_QUERY",
+		"label": "查询",
+		"pluralLabel": "查询",
+		"jvmBased": "true",
+		"topology": {
+			"minInstances": "0"
+		},
+		"startRunner": {
+			"program": "scripts/queryControl.sh",
+			"args": ["start"]
+		},
+		"parameters": [
+		{
+			"name": "bdp.log.dir",
+			"configName": "bdp.log.dir",
+			"description": "查询日志目录",
+			"label": "查询日志目录",
+			"required": true,
+			"type": "string",
+			"default": "/cluster/bdp/logs"
+		},
+		{
+        	"name": "bdp.log.file",
+        	"configName": "bdp.log.file",
+        	"description": "查询日志文件",
+        	"label": "查询日志文件",
+        	"required": true,
+        	"type": "string",
+        	"default": "queryRolling.log"
+        },
+		{
+			"name": "JVMConfig",
+			"configName": "JVMConfig",
+			"description": "查询程序 JVM 参数",
+			"label": "查询程序 JVM 参数",
+			"required": true,
+			"type": "string",
+			"default": "-Xmx3g -Xms1g"
+		},
+		{
+			"name": "zookeeper.quorum",
+			"configName": "zookeeper.quorum",
+			"description": "zookeeper配置，多个之间用逗号分隔",
+			"label": "zookeeper配置",
+			"required": true,
+			"type": "string",
+			"default": ""
+		},
+		{
+			"name": "jdbcDriverClass",
+			"configName": "jdbcDriverClass",
+			"description": "Mysql 驱动类名",
+			"label": "Mysql 驱动类名",
+			"required": true,
+			"type": "string",
+			"default": "com.mysql.jdbc.Driver"
+		},
+		{
+			"name": "jdbcDatabaseUsername",
+			"configName": "jdbcDatabaseUsername",
+			"description": "Mysql 登录名",
+			"label": "Mysql 登录名",
+			"required": true,
+			"type": "string",
+			"default": "root"
+		},
+		{
+			"name": "jdbcDatabasePassword",
+			"configName": "jdbcDatabasePassword",
+			"description": "Mysql 登录密码",
+			"label": "Mysql 登录密码",
+			"required": true,
+			"type": "string",
+			"default": "broadtech"
+		},
+		{
+			"name": "jdbcDatabaseUrl",
+			"configName": "jdbcDatabaseUrl",
+			"description": "Mysql 地址",
+			"label": "Mysql 地址",
+			"required": true,
+			"type": "string",
+			"default": "jdbc:mysql://master02:3306/job_admin?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull"
+		},
+		{
+			"name": "jdbcConfigEnabled",
+			"configName": "jdbcConfigEnabled",
+			"description": "从数据库获取表编号等信息",
+			"label": "从数据库获取表编号等信息",
+			"required": true,
+			"type": "string",
+			"default": "true"
+		},
+				{
+			"name": "hbase.index.type",
+			"configName": "hbase.index.type",
+			"description": "hbase索引类型",
+			"label": "hbase索引类型",
+			"required": true,
+			"type": "string",
+			"default": "rule"
+		},
+		{
+			"name": "query.service.port",
+			"configName": "query.service.port",
+			"description": "socket交互查询监听端口",
+			"label": "socket交互查询监听端口",
+			"required": true,
+			"type": "port",
+			"default": 9791
+		},
+		{
+			"name": "redis.server.host",
+			"configName": "redis.server.host",
+			"description": "redis服务器地址",
+			"label": "redis服务器地址",
+			"required": true,
+			"type": "string",
+			"default": ""
+		},
+		{
+			"name": "redis.server.port",
+			"configName": "redis.server.port",
+			"description": "redis服务器端口号",
+			"label": "redis服务器端口号",
+			"required": true,
+			"type": "string",
+			"default": ""
+		},
+				{
+			"name": "redis.server.password",
+			"configName": "redis.server.password",
+			"description": "redis服务器密码",
+			"label": "redis服务器密码",
+			"required": true,
+			"type": "password",
+			"default": ""
+		},
+		{
+			"name": "query.cache.localdir",
+			"configName": "query.cache.localdir",
+			"description": "缓存目录",
+			"label": "缓存目录",
+			"required": true,
+			"type": "string",
+			"default": "/tmp/bdp/query/"
+		},
+		{
+			"name": "backend.msisdn_imsi_update.enable",
+			"configName": "backend.msisdn_imsi_update.enable",
+			"description": "更新号码和imsi对应关系是否开启",
+			"label": "更新号码和imsi对应关系是否开启",
+			"required": true,
+			"type": "string",
+			"default": "false"
+		},
+		{
+			"name": "backend.msisdn_imsi_update.time",
+			"configName": "backend.msisdn_imsi_update.time",
+			"description": "任务时间",
+			"label": "任务时间",
+			"required": true,
+			"type": "string",
+			"default": "02:20:00"
+		},
+				{
+			"name": "backend.msisdn_imsi_update.task.splitSize",
+			"configName": "backend.msisdn_imsi_update.task.splitSize",
+			"description": "任务分片大小 单位GB",
+			"label": "任务分片大小 单位GB",
+			"required": true,
+			"type": "string",
+			"default": "2"
+		},
+		{
+			"name": "backend.msisdn_imsi_update.task.tableName",
+			"configName": "backend.msisdn_imsi_update.task.tableName",
+			"description": "任务表名",
+			"label": "任务表名",
+			"required": true,
+			"type": "string",
+			"default": "MLTE_S10S11LOG_F2"
+		},
+		{
+			"name": "hbase.saved.days",
+			"configName": "hbase.saved.days",
+			"description": "数据保存天数 ",
+			"label": "数据保存天数 ",
+			"required": true,
+			"type": "string",
+			"default": "30"
+		},
+		{
+			"name": "hbase.saved.begindate",
+			"configName": "hbase.saved.begindate",
+			"description": "数据保存开始日期",
+			"label": "数据保存开始日期",
+			"required": true,
+			"type": "string",
+			"default": "2016-01-01"
+		},
+		{
+			"name": "monitoring.enabled",
+			"label": "查询度量监控",
+			"description": "启用查询度量监控.",
+			"type": "boolean",
+			"default": true,
+			"configurableInWizard": true
+		},
+		{
+			"name": "bdp.http.metrics.host",
+			"label": "度量收集主机",
+			"description": "度量收集主机.",
+			"type": "string",
+			"default": "0.0.0.0"
+		},
+		{
+			"name": "bdp.http.metrics.port",
+			"label": "度量收集端口",
+			"description": "度量收集端口.",
+			"type": "port",
+			"default": 9760
+		}
+		],
+		"configWriter": {
+			"generators": [
+			{
+				"filename": "queryCmd.properties",
+				"refreshable": false,
+				"configFormat": "properties",
+				"includedParams": ["bdp.log.dir",
+				"JVMConfig","bdp.log.file"]
+			},
+			{
+				"filename": "cmConf.properties",
+				"refreshable": false,
+				"configFormat": "properties",
+				"includedParams": [
+				"zookeeper.quorum",
+				"jdbcDriverClass",
+				"jdbcDatabaseUsername",
+				"jdbcDatabasePassword",
+				"jdbcDatabaseUrl",
+				"jdbcConfigEnabled",
+				"hbase.index.type",
+				"query.service.port",
+				"redis.server.host",
+				"redis.server.port",
+				"redis.server.password",
+				"query.cache.localdir",
+				"backend.msisdn_imsi_update.enable",
+				"backend.msisdn_imsi_update.time",
+				"backend.msisdn_imsi_update.task.splitSize",
+				"backend.msisdn_imsi_update.task.tableName",
+				"bdp.http.metrics.port",
+				"monitoring.enabled"]
+			},
+			{
+				"filename": "bdp-monitoring.properties",
+				"refreshable": false,
+				"configFormat": "properties",
+				"includedParams": [
+				"bdp.http.metrics.host",
+				"bdp.http.metrics.port",
+				"monitoring.enabled"]
+			}]
+		}
+	}
+	]
+}

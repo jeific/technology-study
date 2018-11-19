@@ -1,0 +1,38 @@
+<assembly>
+    <id>bin</id>
+    <formats>
+        <format>dir</format>
+        <format>tar.gz</format>
+    </formats>
+    <includeBaseDirectory>true</includeBaseDirectory>
+
+    <fileSets>
+        <fileSet>
+            <directory>target/depends</directory>
+            <outputDirectory>core</outputDirectory>
+            <fileMode>644</fileMode>
+        </fileSet>
+        <fileSet>
+            <directory>target</directory>
+            <outputDirectory>core</outputDirectory>
+            <fileMode>644</fileMode>
+            <includes>
+                <include>${project.artifactId}-${project.version}.jar</include>
+            </includes>
+        </fileSet>
+        <fileSet>
+            <directory>${project.basedir}/static/</directory>
+            <outputDirectory>.</outputDirectory>
+            <includes>
+                <include>**/*</include>
+            </includes>
+        </fileSet>
+        <fileSet>
+            <directory>${project.basedir}/../portrait-plugins/target/plugins/</directory>
+            <outputDirectory>plugins</outputDirectory>
+            <includes>
+                <include>**/*</include>
+            </includes>
+        </fileSet>
+    </fileSets>
+</assembly>

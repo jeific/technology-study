@@ -1,0 +1,729 @@
+$gray250: rgb(250,250,250);
+$gray245: rgb(245,245,245);
+$gray240: rgb(240,240,240);
+$gray230: rgb(230,230,230);
+$gray220: rgb(220,220,220);
+$gray200: rgb(200,200,200);
+$gray180: rgb(180,180,180);
+$gray150: rgb(150,150,150);
+$gray120: rgb(120,120,120);
+$gray90: rgb(90,90,90);
+$gray60: rgb(60,60,60);
+$gray30: rgb(30,30,30);
+
+$red: rgb(239,83,80);
+$blue: rgb(3,169,244);
+$darkBlue: rgb(21,101,192);
+$green: rgb(76,175,80);
+$darkGreen: rgb(46,125,50);
+$red: rgb(211,47,47);
+$darkRed: rgb(183,28,28);
+$yellow: rgb(251,192,45);
+$darkYellow: rgb(249,168,37);
+
+$shadow1: rgba(0, 0, 0, 0.12) 0px 1px 6px, rgba(0, 0, 0, 0.12) 0px 1px 4px;
+$shadow2: rgba(0, 0, 0, 0.16) 0px 3px 10px, rgba(0, 0, 0, 0.23) 0px 3px 10px;
+$shadow3: rgba(0, 0, 0, 0.19) 0px 10px 30px, rgba(0, 0, 0, 0.23) 0px 6px 10px;
+$centerShadow: rgba(0, 0, 0, 0.10) 10px 0px 25px, rgba(0, 0, 0, 0.05) 0px 0px 10px;
+$shadow1Inset: rgba(0, 0, 0, 0.12) 0px 1px 6px inset, rgba(0, 0, 0, 0.12) 0px 1px 4px inset;
+$shadow2Inset: rgba(0, 0, 0, 0.16) 0px 3px 10px inset, rgba(0, 0, 0, 0.23) 0px 3px 10px inset;
+
+@mixin center{
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+html, body, #wrapper{
+  height: 100%;
+  margin: 0px;
+  overflow: hidden;
+  padding: 0px;
+  position: relative;
+  width: 100%;
+}
+
+body{
+  font-family: 'Montserrat', sans-serif;
+}
+
+#wrapper{
+  transition: all 0.4s;
+  
+  &.theme-green{
+    background-color: $green;
+    
+    #card #timer #center-band{
+      #start-button{
+        i{
+          border-color: $green;
+          color: $green;
+        }
+      }
+      
+      #dial-dots-wrapper #dial-dots .dot-wrapper.expanded .dot{
+        background-color: $green;
+      }
+      
+      #dial-track #dial #dial-ball{
+        background-color: $green;
+        
+        &:after{
+          background-color: rgba($green, 0.25);
+        }
+      }
+      
+      #center #time #centi-sec{
+        color: $green;
+      }
+    }
+  }
+  
+  &.theme-blue{
+    background-color: $blue;
+    
+    #card #timer #center-band{
+      #start-button{
+        i{
+          border-color: $blue;
+          color: $blue;
+        }
+      }
+      
+      #dial-dots-wrapper #dial-dots .dot-wrapper.expanded .dot{
+        background-color: $blue;
+      }
+      
+      #dial-track #dial #dial-ball{
+        background-color: $blue;
+        
+        &:after{
+          background-color: rgba($blue, 0.25);
+        }
+      }
+      
+      #center #time #centi-sec{
+        color: $blue;
+      }
+    }
+  }
+  
+  &.theme-yellow{
+    background-color: $yellow;
+    
+    #card #timer #center-band{
+      #start-button{
+        i{
+          border-color: $yellow;
+          color: $yellow;
+        }
+      }
+      
+      #dial-dots-wrapper #dial-dots .dot-wrapper.expanded .dot{
+        background-color: $yellow;
+      }
+      
+      #dial-track #dial #dial-ball{
+        background-color: $yellow;
+        
+        &:after{
+          background-color: rgba($yellow, 0.25);
+        }
+      }
+      
+      #center #time #centi-sec{
+        color: $yellow;
+      }
+    }
+  }
+  
+  &.theme-red{
+    background-color: $red;
+    
+    #card #timer #center-band{
+      #start-button{
+        i{
+          border-color: $red;
+          color: $red;
+        }
+      }
+      
+      #dial-dots-wrapper #dial-dots .dot-wrapper.expanded .dot{
+        background-color: $red;
+      }
+      
+      #dial-track #dial #dial-ball{
+        background-color: $red;
+        
+        &:after{
+          background-color: rgba($red, 0.25);
+        }
+      }
+      
+      #center #time #centi-sec{
+        color: $red;
+      }
+    }
+  }
+  
+  #inspiration{
+    bottom: 10px;
+    left: 10px;
+    position: absolute;
+    z-index: 1;
+    
+    .label{
+      color: $gray60;
+      display: inline-block;
+      margin: 0px;
+      font-size: 0.9em;
+      font-weight: 300;
+    }
+    
+    .link{
+      color: white;
+      display: inline-block;
+      font-size: 0.9em;
+      font-weight: 300;
+      margin: 0px;
+      margin-left: 4px;
+      text-decoration: none;
+    }
+  }
+}
+
+#card{
+  @include center;
+  background: white;
+  border-radius: 2px;
+  box-shadow: $shadow2;
+  height: 520px;
+  overflow: hidden;
+  position: relative;
+  width: 700px;
+  z-index: 10;
+  
+  &:hover{
+    #timer #center-band #dial-track #dial #dial-ball{
+      opacity: 1;
+      &:after{
+        height: 80px;
+        opacity: 1;
+        width: 80px;
+      }
+    }
+  }
+}
+
+#settings{
+  height: 240px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 60px;
+  #theme{
+    height: 100%;
+    width: 100%;
+    
+    .option{
+      cursor: pointer;
+      display: inline-block;
+      height: 60px;
+      position: relative;
+      width: 60px;
+      
+      &.selected{
+        i{
+          opacity: 1;
+        }
+      }
+      
+      .color{
+        @include center;
+        box-shadow: $shadow1;
+        height: 50px;
+        transition: all 0.4s;
+        width: 50px;
+      }
+      
+      i{
+        @include center;
+        color: white;
+        opacity: 0;
+        transition: all 0.4s;
+      }
+    }
+    
+    #green{
+      &:hover .color{
+        background-color: $darkGreen;
+      }
+      
+      .color{
+        background-color: $green;
+      }
+    }
+    
+    #blue{
+      &:hover .color{
+        background-color: $darkBlue;
+      }
+      
+      .color{
+        background-color: $blue;
+      }
+    }
+    
+    #yellow{
+      &:hover .color{
+        background-color: $darkYellow;
+      }
+      
+      .color{
+        background-color: $yellow;
+      }
+    }
+    
+    #red{
+      &:hover .color{
+        background-color: $darkRed;
+      }
+      
+      .color{
+        background-color: $red;
+      }
+    }
+  }
+}
+
+.circle{
+  border-radius: 1000px;
+}
+  
+#timer{
+  @include center;
+  cursor: pointer;
+  height: 420px;
+  user-select: none;
+  width: 420px;
+  
+  &.animate-in{
+    pointer-events: none;
+    #center-band{
+      #start-button{
+        animation: animate-start-button 2s ease-in;
+        
+        i.fa-play{
+          opacity: 0;
+        }
+        i.fa-clock-o{
+          opacity: 1;
+        }
+      }
+      
+      #dial-track #dial #dial-ball{
+        opacity: 0 !important;
+      }
+      
+      #center{
+        #time{
+          opacity: 0;
+        }
+      }
+    }
+  }
+  
+  &.setting{
+    #center-band #dial-dots-wrapper #dial-dots .dot-wrapper .dot{
+      height: 4px;
+      opacity: 1;
+      width: 4px;
+    }
+  }
+  
+  #top-band, #bottom-band{
+    background: linear-gradient(to right, $gray250 60%, $gray230 80%);
+    height: 380px;
+    left: 50%;
+    overflow: hidden;
+    position: absolute;
+    transform: translateX(-50%);
+    width: 380px;
+    z-index: 1;
+    
+    &:before, &:after, .border{
+      background-color: white;
+      border-radius: 10000px;
+      content: '';
+      height: 900px;
+      position: absolute;
+      top: 50%;
+      width: 900px;
+      z-index: 2;
+    }
+  }
+  
+  #top-band{
+    top: -200px;
+    
+    &:before{
+      left: 0px;
+      transform: translateX(-820px) translateY(-560px);
+    }
+    
+    &:after{
+      box-shadow: $shadow2Inset;
+      right: 0px;
+      transform: translateX(820px) translateY(-560px);
+    }
+    
+    .border{
+      background-color: white;
+      box-shadow: $shadow1Inset;
+      height: 895px;
+      left: 0px;
+      transform: translateX(-820px) translateY(-560px);
+      width: 895px;
+    }
+  }
+  
+  #bottom-band{
+    bottom: -200px;
+    
+    &:before{
+      left: 0px;
+      transform: translateX(-820px) translateY(-340px);
+    }
+    
+    &:after{
+      box-shadow: $shadow2Inset;
+      right: 0px;
+      transform: translateX(820px) translateY(-340px);
+    }
+    
+    .border{
+      background-color: white;
+      box-shadow: $shadow1Inset;
+      height: 895px;
+      left: 0px;
+      transform: translateX(-820px) translateY(-340px);
+      width: 895px;
+    }
+  }
+  
+  #center-band{
+    @include center;
+    backface-visibility: hidden;
+    background: linear-gradient(to right, white, $gray240);
+    box-shadow: $shadow1;
+    height: 380px;
+    padding: 20px;
+    width: 380px;
+    z-index: 2;
+    
+    #start-button{
+      height: 34px;
+      left: 50%;
+      position: absolute;
+      top: 100px;
+      transform: translateX(-50%);
+      width: 34px;
+      z-index: 5;
+      
+      &.show-pause{
+        i{
+          &.fa-play{
+            opacity: 0;
+          }
+
+          &.fa-pause{
+            opacity: 1; 
+          }
+        }
+      }
+      
+      &:hover{
+        &:after{
+          opacity: 1;
+          height: 60px;
+          width: 60px;
+        }
+      }
+      
+      &:active{
+        &:after{
+          opacity: 1;
+          height: 80px;
+          width: 80px;
+        }
+      }
+      
+      &:after{
+        background-color: rgba($gray240, 0.7);
+        border-radius: 10000px;
+        content: '';
+        height: 30px;
+        left: 50%;
+        opacity: 0;
+        position: absolute;
+        top: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        transition: all 0.4s;
+        width: 30px;
+        z-index: -1;
+      }
+      
+      i{
+        @include center;
+        border-style: solid;
+        border-width: 2px;
+        border-radius: 10000px;
+        font-size: 1em;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        transition: all 0.4s;
+        width: 30px;
+        
+        &.fa-pause, &.fa-clock-o{
+          &:before{
+            margin-left: 0px;
+          }
+        }
+        
+        &.fa-pause{
+          opacity: 0;
+        }
+        
+        &.fa-clock-o{
+          border-width: 0px;
+          font-size: 34px;
+          opacity: 0;
+        }
+        
+        &:before{
+          margin-left: 4px;
+        }
+      }
+    }
+    
+    #dial-dots-wrapper{
+      @include center;
+      height: 380px;
+      width: 380px;
+      overflow: hidden;
+      z-index: 2;
+      #dial-dots{
+        @include center;
+        backface-visibility: hidden;
+        height: 342px;
+        width: 342px;
+
+        .dot-wrapper{
+          border-radius: 10000px;
+          height: 4px;
+          position: absolute;
+          width: 4px;
+          z-index: 1;
+          
+          &.expanded{
+            z-index: 2;
+            .dot{
+              height: 50px;
+              opacity: 1;
+              width: 50px;
+            }
+          }
+          
+          .dot{
+            @include center;
+            background-color: $gray220;
+            border-radius: 10000px;
+            height: 0px;
+            opacity: 0;
+            position: absolute;
+            transition: all 0.4s;
+            width: 0px;
+          }
+        }
+      }
+    }
+    
+    #dial-track{
+      @include center;
+      backface-visibility: hidden;
+      height: 340px;
+      width: 340px;
+      z-index: 4;
+      #dial{
+        height: 60px;
+        left: 50%;
+        position: absolute;
+        top: 0px;
+        transform: translateX(-50%) translateY(-50%);
+        user-select: none;
+        width: 60px;
+        z-index: 5;
+
+        &:hover{
+          #dial-ball{
+            height: 55px;
+            width: 55px;
+            &:after{
+              height: 130px !important;
+              width: 130px !important;
+            }
+          }
+        }
+
+        #dial-ball{
+          @include center;
+          box-shadow: $shadow1;
+          height: 50px;
+          opacity: 0;
+          transition: all 0.4s;
+          width: 50px;
+          z-index: 1;
+          &:after{
+            @include center;
+            border-radius: 1000px;
+            content: '';
+            height: 5px;
+            opacity: 0;
+            transition: all 0.4s;
+            width: 5px;
+          }
+        }
+      }
+    }
+  }
+  
+  #band-border{
+    @include center;
+    background: white;
+    border: 2px solid $gray230;
+    height: 380px;
+    padding: 4px;
+    width: 380px;
+  }
+  #base{
+    @include center;
+    background: linear-gradient(to right, $gray250, $gray240);
+    height: 380px;
+    width: 380px;
+  }
+  #center{
+    @include center;
+    background-color: white;
+    box-shadow: $centerShadow;
+    height: 300px;
+    overflow: hidden;
+    width: 300px;
+    z-index: 3;
+    
+    #time{
+      font-size: 1em;
+      font-weight: 300;
+      left: 50%;
+      margin: 0px;
+      position: absolute;
+      top: 100px;
+      transform: translateX(-50%);
+      transition: all 0.4s;
+      width: 120px;
+
+      #sec, #centi-sec{
+        display: inline-block;
+        font-weight: 100;
+        &.entrance{
+          animation: entrance 1s ease-in;
+        }
+      }
+      #sec{
+        color: $gray60;
+        font-size: 5em;
+        height: 60px;
+        line-height: 60px;
+        text-align: center;
+        width: 120px;
+      }
+      #centi-sec{
+        color: $green;
+        font-size: 3em;
+        height: 35px;
+        line-height: 35px;
+        margin-left: 10px;
+        margin-top: 5px;
+        width: 60px;
+      }
+    }
+  }
+}
+
+@keyframes animate-start-button{
+  0%, 10%, 20%, 30%, 40%, to {
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    top: 50%;
+  }
+
+  0% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-50%) scale3d(.3, .3, .3);
+  }
+
+  10% {
+    transform: translateX(-50%) translateY(-50%) scale3d(1.1, 1.1, 1.1);
+  }
+
+  20% {
+    transform: translateX(-50%) translateY(-50%) scale3d(.9, .9, .9);
+  }
+
+  30% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(-50%) scale3d(1.03, 1.03, 1.03);
+  }
+
+  40% {
+    transform: translateX(-50%) translateY(-50%) scale3d(.97, .97, .97);
+  }
+
+  50% {
+    opacity: 1;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%) scale3d(1, 1, 1);
+  }
+  100%{
+    top: 100px;
+    transform: translateX(-50%) translateY(0%) scale3d(1, 1, 1);
+  }
+}
+
+@keyframes entrance {
+  from, 60%, 75%, 90%, to {
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+
+  from {
+    opacity: 0;
+    transform: translate3d(0, 3000px, 0);
+  }
+
+  60% {
+    opacity: 1;
+    transform: translate3d(0, -20px, 0);
+  }
+
+  75% {
+    transform: translate3d(0, 10px, 0);
+  }
+
+  90% {
+    transform: translate3d(0, -5px, 0);
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}

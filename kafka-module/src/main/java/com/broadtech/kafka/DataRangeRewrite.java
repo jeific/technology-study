@@ -7,7 +7,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
-import java.io.InputStream;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
@@ -19,24 +18,12 @@ public class DataRangeRewrite {
     private static final Logger logger = LoggerFactory.getLogger(OffsetCheckAndRewrite.class);
 
     public static void main(String[] args) throws ParseException, IOException {
-        Properties conf = new Properties();
-        try (InputStream ins = DataRangeRewrite.class.getResourceAsStream("/conf.properties")) {
-            conf.load(ins);
-        }
+        Properties conf = SysConfig.loadConfig();
         String[] topic = conf.getProperty("topics").split(",");
         String model = conf.getProperty("run.model");
         String timeUnit = conf.getProperty("time.unit");
         if (model == null) throw new IllegalArgumentException("必须配置run.model参数,取值:export,rewrite,check");
-        Properties props = new Properties();
-        props.put("bootstrap.servers", conf.getProperty("bootstrap.servers")); // slave03:9092,slave04:9092,slave05:9092
-        props.put("group.id", conf.getProperty("group.id"));
-        props.put("auto.offset.reset", "earliest");
-        props.put("enable.auto.commit", "true");
-        props.put("auto.commit.interval.ms", "1000");
-        props.put("key.deserializer", "org.apache.kafka.common.serialization.StringDeserializer");
-        props.put("value.deserializer", "org.apache.kafka.common.serialization.StringDeserializer");
-        props.put("key.serializer", "org.apache.kafka.common.serialization.StringSerializer");
-        props.put("value.serializer", "org.apache.kafka.common.serialization.StringSerializer");
+        Properties props = SysConfig.getKafkaPro(conf);
 
         SimpleDateFormat df = new SimpleDateFormat("yyyyMMddHHmm");
         String[] timeRangeConf = conf.getProperty("timeRange").split(",");
@@ -47,22 +34,36 @@ public class DataRangeRewrite {
         }
         logger.info("config time range: " + Arrays.toString(timeRangeConf));
         logger.info("check time range: " + Arrays.toString(timeRanges));
-
-        for (String miniTopic : topic) {
-            List<PartitionInfo> partitionInfos = get(props, miniTopic);
-            logger.info(miniTopic + " Partitions: " + partitionInfos.size());
-
+        if ("import".equals(model)) {
             try {
-                CountDownLatch cdl = new CountDownLatch(partitionInfos.size());
-                for (int i = 0; i < partitionInfos.size(); i++) {
-                    run(cdl, props, new TopicPartition(miniTopic, i), timeRanges, model, timeUnit, conf);
+                CountDownLatch cdl = new CountDownLatch(topic.length);
+                for (String miniTopic : topic) {
+                    new Thread(() -> {
+                        new ImportToKafka(props, conf, miniTopic).run();
+                        cdl.countDown();
+                    }).start();
                 }
                 cdl.await();
             } catch (Exception e) {
                 logger.error(e.toString(), e);
             }
+        } else {
+            for (String miniTopic : topic) {
+                List<PartitionInfo> partitionInfos = get(props, miniTopic);
+                logger.info(miniTopic + " Partitions: " + partitionInfos.size());
+                try {
+                    CountDownLatch cdl = new CountDownLatch(partitionInfos.size());
+                    for (int i = 0; i < partitionInfos.size(); i++) {
+                        run(cdl, props, new TopicPartition(miniTopic, i), timeRanges, model, timeUnit, conf);
+                    }
+                    cdl.await();
+                } catch (Exception e) {
+                    logger.error(e.toString(), e);
+                }
+            }
         }
-        logger.info("检查完毕，立即结束");
+        logger.info("执行完毕，立即结束");
+        System.exit(0);
     }
 
     private static void run(CountDownLatch cdl, Properties props, TopicPartition topicPartition, long[][] timeRanges

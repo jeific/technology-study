@@ -16,20 +16,40 @@ public class HiveModule {
     private static final String TABLE_2 = "hive_perform_test_20180512_2";
 
     public static void main(String[] args) throws ClassNotFoundException {
-        String url = "jdbc:hive2://192.168.95.237:10000/default";
+        // jdbc:hive2://192.168.95.235:10000/default
+        String url = "jdbc:hive2://master01:2181,master02:2181,slave01:2181/;serviceDiscoveryMode=zooKeeper;zooKeeperNamespace=hiveserver2_zk";
         Class.forName("org.apache.hive.jdbc.HiveDriver");
-        try (Connection conn = DriverManager.getConnection(url, "root", "");
+        Class.forName("com.mysql.jdbc.Driver");
+        url = "jdbc:mysql://slave01:3306";
+        try (Connection conn = DriverManager.getConnection(url, "root", "starcor");
              Statement stmt = conn.createStatement();) {
-            stmt.execute(createTable(TABLE));
-            stmt.execute(createTable(TABLE_2));
+//            stmt.execute(createTable(TABLE));
+//            stmt.execute(createTable(TABLE_2));
+//            stmt.execute("select * from ad.adflow_log where day=20200503 limit 1");
 
-            CountDownLatch cdl = new CountDownLatch(2);
-            exeOverride(10, cdl, conn.createStatement()); // 新建连接，否则遭遇SASL authentication not complete
-            exeQuery(10, cdl, conn.createStatement());
-            cdl.await();
+//            CountDownLatch cdl = new CountDownLatch(2);
+//            exeOverride(10, cdl, conn.createStatement()); // 新建连接，否则遭遇SASL authentication not complete
+//            exeQuery(10, cdl, conn.createStatement());
+//            cdl.await();
 
-            stmt.execute(dropTable(TABLE));
-            stmt.execute(dropTable(TABLE_2));
+//            stmt.execute(dropTable(TABLE));
+//            stmt.execute(dropTable(TABLE_2));
+
+            ResultSet res = conn.getMetaData().getColumns("ad", "%", "evs_movie", "%");
+           // TABLE_CAT	TABLE_SCHEM	TABLE_NAME	COLUMN_NAME	DATA_TYPE	TYPE_NAME	COLUMN_SIZE	BUFFER_LENGTH	DECIMAL_DIGITS	NUM_PREC_RADIX
+            // NULLABLE	REMARKS	COLUMN_DEF	SQL_DATA_TYPE	SQL_DATETIME_SUB	CHAR_OCTET_LENGTH	ORDINAL_POSITION
+            // IS_NULLABLE	SCOPE_CATALOG	SCOPE_SCHEMA	SCOPE_TABLE	SOURCE_DATA_TYPE	IS_AUTOINCREMENT	IS_GENERATEDCOLUMN
+            for(int i = 1;i<=res.getMetaData().getColumnCount();i++){
+                System.out.print(res.getMetaData().getColumnName(i)+"\t");
+            }
+            System.out.println();
+            while (res.next()) {
+                for (int i = 1; i <= res.getMetaData().getColumnCount(); i++) {
+                    System.out.print(res.getObject(i) + "\t");
+                }
+                System.out.println();
+            }
+            res.close();
         } catch (Exception e) {
             logger.error(e.toString(), e);
         }

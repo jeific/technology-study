@@ -1,6 +1,5 @@
 package com.broadtech.test;
 
-import com.broadtech.common.util.ThreadAssistant;
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.buffer.Unpooled;
 import io.netty.channel.ChannelHandlerContext;
@@ -12,11 +11,10 @@ import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
 
 import java.util.concurrent.ConcurrentLinkedQueue;
-import java.util.concurrent.TimeUnit;
 
 public class TcpSource {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         ConcurrentLinkedQueue<ChannelHandlerContext> channels = new ConcurrentLinkedQueue<>();
         NioEventLoopGroup boos = new NioEventLoopGroup(1);
         ServerBootstrap serverBootstrap = new ServerBootstrap();
@@ -38,14 +36,14 @@ public class TcpSource {
                 });
         serverBootstrap.bind(999);
         while (channels.isEmpty()) {
-            ThreadAssistant.sleep(100, TimeUnit.MILLISECONDS);
+            Thread.sleep(100);
         }
         System.out.println("starting send data ...");
         ChannelHandlerContext ctx = channels.poll();
         try {
             for (int i = 0; i < 300; i++) {
                 ctx.writeAndFlush(Unpooled.copiedBuffer(("This is seq " + i + "\n").getBytes()));
-                ThreadAssistant.sleep(1, TimeUnit.MILLISECONDS);
+                Thread.sleep(1);
             }
         } catch (Exception e) {
             e.printStackTrace();

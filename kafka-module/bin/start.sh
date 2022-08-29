@@ -19,3 +19,4 @@ elif [ 'exec' = $1 ];then
 else
   echo "参数错误，仅额外支持debug|exec选项"
 fi
+

@@ -21,6 +21,10 @@
         <module>spark-test</module>
         <module>kafka-module</module>
         <module>python_learn</module>
+        <module>webapp.test</module>
+        <module>geospark</module>
+        <module>linkis</module>
+        <module>bluewhale-elect</module>
     </modules>
     <properties>
         <brd.repository>http://192.168.90.95:8081/repository</brd.repository>

@@ -11,5 +11,8 @@ object OneScala {
     map.asScala.foreach(e => println(e._1 + "_" + e._2))
     val host = "master01:1234"
     host.split(",").foreach(k => println(k))
+    // 忽略大小写
+    val p = "(?i)sec|k".r()
+    p.findAllMatchIn("kSEC lsec").foreach(f => println(s"result:$f"))
   }
 }

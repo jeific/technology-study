@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ClipBoard.js使用：修改HTML</title>
+    <meta charset="utf-8">
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="static/lib/clipboard.min.js"></script>
+    <script src="static/lib/layui.all.js"></script>
+    s
+    <link rel="stylesheet" href="static/lib/layui.css" media="all">
+</head>
+<body>
+<!--案例一：从另一元素复制文本：通过data-clipboard-target在触发器中添加属性来实现-->
+<input type="text" id="input">
+<button id="copy" data-clipboard-target="#input">复制input框中的内容</button>
+<textarea name="" id="" cols="30" rows="10"></textarea>
+
+<button id="copy2">copy标签属性</button>
+<button id="copy3" data-clipboard-text="Just because you can doesn't mean you should — clipboard.js">
+    Copy to clipboard
+</button>
+<!--右键菜单-->
+<p>dklfjsfdlksdjfsjlk领导右键菜单</p>
+<p>dklfjsfdlksdjfsjlk领导右键设为红色菜单</p>
+<div id="colorList" style="display: none">
+    <!--设置一个ul列表-->
+    <ul>
+        <li color="red">设为红色</li>
+        <li color="blue">设为蓝色</li>
+        <li color="green">设为绿色</li>
+    </ul>
+</div>
+
+</body>
+</html>
+<script type="text/javascript">
+    var clipboard = new ClipboardJS('#copy');
+    // 显示用户反馈/捕获复制/剪切操作后选择的内容
+    clipboard.on('success', function (e) {
+        console.info('Action:', e.action)//触发的动作/如：copy,cut等
+        console.info('Text:', e.text);//触发的文本
+        console.info('Trigger:', e.trigger);//触发的DOm元素
+        e.clearSelection();//清除选中样式（蓝色）
+    });
+    clipboard.on('error', function (e) {
+        console.error('Action:', e.action);
+        console.error('Trigger:', e.trigger);
+    });
+    new ClipboardJS('#copy2', {
+        text: function (trigger) {
+            console.log(trigger.name);
+            return "dflsfd大师傅地方s";
+        }
+    });
+    new ClipboardJS('#copy3');
+
+    $("p").on("contextmenu", function (e) {
+        layui.use(['layer'], function () {
+            let layer = layui.layer;
+            layer.open({
+                type: 0 //Page层类型
+                , title: false
+                , btn: []
+                , closeBtn: 0
+                , time: 2000
+                , area: ['150px', '110px']
+                , offset: [e.clientX, e.clientY]
+                , anim: 0 //0-6的动画形式，-1不开启
+                , shade: 0
+                , content: '<div class="layui-row">' +
+                '<div class="layui-row " style="margin-bottom: 10px;font-size: 12px;font-weight: bold"> <a>复制jobId</a></div>' +
+                '<div class="layui-row"> <a>复制任务名</a></div>' +
+                '</div>'
+            });
+
+            // layer.msg(
+            //     "<a href='javascript:;' onclick='copy_to_clipboard(\""+jobName+"\")' style='font-size: large'>复制任务名</a><br>" +
+            //     "<a href='javascript:;' onclick='copy_to_clipboard(\""+jobId+"\")' style='font-size: large'>复制任务ID</a>"
+            //     ,{
+            //         offset: [(e.pageY + 10) + "px", (e.pageX + 10) + "px"],
+            //         skin: 'demo-class'
+            //     });
+        });
+        return false;
+    });
+
+</script>

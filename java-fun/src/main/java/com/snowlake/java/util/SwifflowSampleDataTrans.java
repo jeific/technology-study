@@ -7,7 +7,7 @@ public class SwifflowSampleDataTrans {
 
     public static void main(String[] args) throws DecoderException {
         String sampleData = "32303139303830367c63627378313334303336313240697074767c3230313930383036313932323136";
-        byte[] data = Hex.decodeHex(sampleData);
+        byte[] data = Hex.decodeHex(sampleData.toCharArray());
         String str = new String(data);
         System.out.println(str);
         byte b = '|';

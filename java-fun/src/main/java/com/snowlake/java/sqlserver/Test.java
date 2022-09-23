@@ -45,6 +45,15 @@ public class Test {
         }
     }
 
+    private static void query(Connection connection, String sql) {
+        try (Statement stmt = connection.createStatement();
+             ResultSet res = stmt.executeQuery(sql)) {
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
     private static void query(Connection connection) throws SQLException {
         try (Statement stmt = connection.createStatement();
              ResultSet res = stmt.executeQuery("select * from sys.databases")) {

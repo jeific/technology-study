@@ -25,8 +25,8 @@ public class Test {
     private static Connection conn() throws SQLException, ClassNotFoundException {
         String driverName = "com.microsoft.sqlserver.jdbc.SQLServerDriver";//SQL数据库引擎
         String dbURL = "jdbc:sqlserver://localhost:1533";//DatabaseName=TutorialDB";//数据源  ！！！注意若出现加载或者连接数据库失败一般是这里出现问题
-        String Name = "test"; // "root";
-        String Pwd = "654321"; //"Bluewhale@1234";
+        String Name = "test"; // "root"; sa
+        String Pwd = "654321"; //"Bluewhale@1234";  qdhpj*123
         try {
             Class.forName(driverName);
             Connection connection = DriverManager.getConnection(dbURL, Name, Pwd);

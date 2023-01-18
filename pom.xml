@@ -27,7 +27,7 @@
         <module>bluewhale-elect</module>
     </modules>
     <properties>
-        <brd.repository>http://192.168.90.95:8081/repository</brd.repository>
+        <brd.repository>http://192.168.95.235:8081/repository</brd.repository>
         <scala.version>2.11.8</scala.version>
     </properties>
     <!--  私服仓库依赖-->
